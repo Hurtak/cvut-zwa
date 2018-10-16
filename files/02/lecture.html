@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+    <!DOCTYPE html> verze html specifikace co se ma pouzit
+    Metadata dokumentu ve znacce <head>,
+    obsah dokumentu ve znacce <body>
+-->
+<html lang="cs"><!-- Jazyk dokumentu -->
+    <head>
+        <!-- Název dokumentu -->
+        <title>2. cvičení HTML</title>
+
+        <!-- Znakova sada dokumentu, dobre uvadet, bez tohoto tagu by se nemusely
+        spravne zobrazovat české znaky. -->
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>2. cvičení HTML</h1>
+
+        <hr><!-- Oddelujici cara -->
+
+        <h2>Nadpisy</h2>
+        <h1>Nadpis 1. urovne</h1>
+        <h2>Nadpis 2. urovne</h2>
+        <h3>Nadpis 3. urovne</h3>
+        <h4>Nadpis 4. urovne</h4>
+        <h5>Nadpis 5. urovne</h5>
+        <h6>Nadpis 6. urovne</h6>
+
+        <h2>Odstavce</h2>
+        <p>Text odstavce</p>
+        <p>Text odstavce</p>
+        <p>Text zalomeny pomoci tagu <br>dalsi text</p>
+
+        <h2>Prazdne elementy bez vyznamu</h2>
+        <p>Budou se hodit az zacneme pracovat s CSS</p>
+        <div>Blokovy element bez vyznamu</div>
+        <div>Blokovy element bez vyznamu</div>
+        <div>Blokovy element bez vyznamu</div>
+        <span>Radkovy element bez vyznamu</span>
+        <span>Radkovy element bez vyznamu</span>
+        <span>Radkovy element bez vyznamu</span>
+
+        <h2>Seznamy</h2>
+        <ul>
+            <li>Polozka seznamu</li>
+            <li>Polozka seznamu</li>
+            <li>Polozka seznamu</li>
+        </ul>
+        <ol>
+            <li>Polozka cislovaneho seznamu</li>
+            <li>Polozka cislovaneho seznamu</li>
+            <li>Polozka cislovaneho seznamu</li>
+        </ol>
+        <ol>
+            <li value="10">Pouziti atributu value</li>
+            <li>Pouziti atributu value</li>
+            <li>Pouziti atributu value</li>
+            <li value="20">Pouziti atributu value</li>
+            <li>Pouziti atributu value</li>
+        </ol>
+
+        <h2>Formatovani textu</h2>
+        <ul>
+            <li><strong>znacka strong</strong></li>
+            <li><em>znacka em</em></li>
+            <li><mark>znacka mark</mark></li>
+            <li><small>znacka small</small></li>
+            <li><del>znacka del</del></li>
+            <li><ins>znacka ins</ins></li>
+            <li>znacka sup a sub: log<sub>2</sub>16 &times; 2<sup>2</sup></li>
+            <li><q>znacka q pro citace</q></li>
+        </ul>
+
+        <h2>Odkazy</h2>
+        <p>Text s <a href="https://example.com">normalnim odkazem</a> a s <a href="https://example.com" target="_blank">odkazem co se otevira do nove zalozky</a>.</p>
+
+        <h2>Obrazky</h2>
+        <img
+            src="img/dog.jpg"
+            width="500"
+            height="332"
+            alt="Pes"
+        >
+
+        <h2>Tabulky</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>bunka nadpisoveho radku</th>
+                    <th>bunka nadpisoveho radku</th>
+                    <th>bunka nadpisoveho radku</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>bunka tabulky a</td>
+                    <td>bunka tabulky aaaaaaaaa</td>
+                    <td>bunka tabulky aaaaaaaaaaaaaaaaaaaaa</td>
+                </tr>
+                <tr>
+                    <td>bunka tabulky</td>
+                    <td colspan="2">bunka tabulky na 2 sloupce pomoci colspan atributu</td>
+                </tr>
+                <tr>
+                    <td>bunka tabulky aaaaaaaaaaaaaaaaaaaaa</td>
+                    <td rowspan="2">bunka tabulky na 2 radky pomoco rowspan atributu</td>
+                    <td>bunka tabulky aaaaaaaaa</td>
+                </tr>
+                <tr>
+                    <td>bunka tabulky aaaaaaaaaaaaaaaaaaaaa</td>
+                    <td>bunka tabulky aaaaaaaaa</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Zkratky</h2>
+        <p>Pomoci znacky abbr vyjadrime ze dany kus textu je zkratka, muzeme pridat atribut title kde dame cely nazev. Prikad zkratky: <abbr title="World Health Organization">WHO</abbr>.
+        </p>
+
+        <h2>HTML entity</h2>
+        <p>
+            V HTML jsou znaky se specialnim vyznamen, napr vetsitko (&gt;), kdyz chceme zapsat text ve kterem tento znak vetsitka a tak ho musime zapsat pomoci html entit.
+            <br>
+            Prikal pouziti entity: 5 &gt; 2.
+        </p>
+        <a href="https://dev.w3.org/html5/html-author/charref">Prehled HTML entit</a>
+
+        <h2>HTML5 semanticke elementy</h2>
+        <img
+            src="img/semantic-elements.gif"
+            width="219"
+            height="258"
+            alt="HTML5 semanticke elementy"
+        >
+        <br>
+        <a href="https://www.w3schools.com/html/html5_semantic_elements.asp">Odkaz na prehled novych elementu</a>
+
+        <h2>Odkazy</h2>
+        <ul>
+            <li><a href="https://tiny.cc/zwa2">Zadání semestrálek z minulých let</a></li>
+            <li><a href="https://dev.w3.org/html5/html-author/charref">Prehled HTML entit</a></li>
+            <li><a href="https://www.w3schools.com/html/html5_semantic_elements.asp">Odkaz na prehled novych elementu</a></li>
+        </ul>
+    </body>
+</html>

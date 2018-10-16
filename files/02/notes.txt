@@ -1,0 +1,147 @@
+Predchozi zadani semestralek
+    tiny.cc/zwa2
+
+HTML
+    Doplnit do textu strukturu
+    Doplnit do textu význam
+    Syntaxe html
+        Značka
+        Obsah značky
+        Atribut
+        HTML entity
+            a<b
+                proc tam neni b
+
+            Webovka "Character Entity Reference Chart" na googlu
+                &lt;
+                &gt;
+                &amp;
+                &apos;
+                &quot;
+                Layout
+        komentare
+
+Základní struktůra stránky
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>This is a title</title>
+        </head>
+        <body>
+            <p>Hello world!</p>
+        </body>
+    </html>
+
+Nadpisy
+    <h1>
+    <h6>
+
+Odstavec
+    <p>
+    <br>
+
+Prázdné elementy
+    <div>
+    <span>
+
+Další
+    <b> - Bold text
+        defines bold text, without any extra importance
+        Prezentační značka (historická)
+    <strong> - Important text
+        defines strong text, with added semantic "strong" importance.
+    <i> - Italic text
+    <em> - Emphasized text
+    <mark> - Marked text
+    <small> - Small text
+    <del> - Deleted text
+    <ins> - Inserted text
+    <sub> - Subscript text
+    <sup> - Superscript text
+    <q>
+
+Komentáře
+    <!-- comment -->
+
+Lists
+    <ul>
+        <li>
+    <ol>
+        <li>
+
+Odkaz
+    <a>
+    Href
+    Relativní url
+    Absolutní url
+
+<img>
+    src
+    width
+    height
+    alt
+        Když nelze zobrazit obrázek
+        Screen readers
+
+Tabulka
+    <table>
+        <thead>
+            <tr>
+            <th>
+        </thead>
+        <tbody>
+            <tr>
+            <td>
+        </tbody>
+    </table>
+
+HTML5 Semantic Elements
+    TODO: w3schools semantic elements image
+    <header>
+    <nav>
+    <section>
+        A section is a thematic grouping of content, typically with a heading.
+    <article>
+    <aside>
+    <main>
+        Defines main content of a document
+    <footer>
+
+short quotation
+    <blockquote>
+    <abbr>
+
+Zkratky
+    <abbr title="World Health Organization">WHO</abbr>
+
+TODO: odkazy
+w3schools.com
+
+Ukol
+    Hlavni nadpis
+
+    Nadpis druhe urovne
+
+        Odstavec s textem a<b
+        Odstavec s **tucnym** textem
+
+    Nadpis druhe urovne - Seznam
+
+        - prvni polozka seznamu
+        - druha polozka seznamu
+            - zanorena polozka
+            - zanorena polozka
+        - treti polozka seznamu
+
+    Nadpis druhe urovne - Obrazek
+
+        obrazek psa
+
+    Nadpis druhe urovne - Tabulka
+
+        -------------------
+        | produkt  | cena |
+        -------------------
+        | CocaCola | 30KC |
+        | Fanta    | 25KC |

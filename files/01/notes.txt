@@ -1,0 +1,76 @@
+Predstaveni
+
+Prihlaseni na pocitace - nastaveni hesla
+    V boot menu vybrat polozku nastaveni hesla
+    Pote se prihlasit pres guest settion
+    Pockat nez vyskoci prohlizec se strankou nastaveni hesel
+    Vybrat odkaz s nastavenim hesel pro ucebnu KNE:310/KNE:311
+    Nastavit heslo
+    Restartovat pocitac
+
+Zminit spravny email a odkaz na seznam cvicicich
+    petr.hurtak@gmail.com
+
+Wiki predmetu
+    https://cw.fel.cvut.cz
+        zahledat zwa
+    https://cw.fel.cvut.cz/wiki/courses/b6b39zwa/start
+    Projit napln predmetu (lectures)
+    Projit hodnoceni
+
+Co s bude probirat
+    Clovek jde na www.seznam.cz, co vsechno se deje po ceste
+
+    Uzivatel
+        OS
+        Prohlizec
+        URL
+    Prenos
+        DNS
+        TCP/IP
+        HTTP
+    Server
+        OS serveru
+        Webovy server
+            PHP
+            HTML
+            CSS
+            JS
+    Browser zobrazi odpoved
+
+    Pekny clanek k tematu
+        https://medium.com/@maneesha.wijesinghe1/what-happens-when-you-type-an-url-in-the-browser-and-press-enter-bb0aa2449c1a
+    ISO/OSI
+        https://cs.wikipedia.org/wiki/Referen%C4%8Dn%C3%AD_model_ISO/OSI
+
+
+    maly boxik
+    https://cs.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+
+HTTP
+    textový komunikační protokol
+    bezstavový
+
+    https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+
+    Request
+        Kam
+        Hlavicky
+        Metoda
+        Telo
+    Response
+        Stavovy kod
+            https://httpstatuses.com/
+        Hlavicka
+        Telo
+
+    Mezera je znak s významem, takže když chceme mít mezeru v cestě, tak musí být zakódovaná
+
+Ukazky
+    1 uzivatel zada url
+    2 dns preklad z domeny na ip
+        host
+    3 otevreni spojeni handshake
+        curl -vL http://example.com
+
+    https://ping.eu/
