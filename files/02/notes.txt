@@ -20,13 +20,14 @@ HTML
                 &quot;
                 Layout
         komentare
+            <!-- comment -->
 
 Základní struktůra stránky
     <!DOCTYPE html>
     <html>
         <head>
             <meta charset="utf-8">
-            <title>This is a title</title>
+            <title>Document title</title>
         </head>
         <body>
             <p>Hello world!</p>
@@ -37,7 +38,7 @@ Nadpisy
     <h1>
     <h6>
 
-Odstavec
+Odstavce
     <p>
     <br>
 
@@ -51,7 +52,6 @@ Další
         Prezentační značka (historická)
     <strong> - Important text
         defines strong text, with added semantic "strong" importance.
-    <i> - Italic text
     <em> - Emphasized text
     <mark> - Marked text
     <small> - Small text
@@ -59,10 +59,11 @@ Další
     <ins> - Inserted text
     <sub> - Subscript text
     <sup> - Superscript text
-    <q>
+    <q> - quotation
 
-Komentáře
-    <!-- comment -->
+short quotation
+    <blockquote>
+    <abbr>
 
 Lists
     <ul>
@@ -97,7 +98,8 @@ Tabulka
     </table>
 
 HTML5 Semantic Elements
-    TODO: w3schools semantic elements image
+    https://www.w3schools.com/html/html5_semantic_elements.asp
+
     <header>
     <nav>
     <section>
@@ -108,26 +110,18 @@ HTML5 Semantic Elements
         Defines main content of a document
     <footer>
 
-short quotation
-    <blockquote>
-    <abbr>
-
 Zkratky
     <abbr title="World Health Organization">WHO</abbr>
 
-TODO: odkazy
-w3schools.com
-
-Ukol
+Ukol na procviceni
     Hlavni nadpis
 
     Nadpis druhe urovne
-
         Odstavec s textem a<b
         Odstavec s **tucnym** textem
+        Odkaz na www.seznam.cz
 
     Nadpis druhe urovne - Seznam
-
         - prvni polozka seznamu
         - druha polozka seznamu
             - zanorena polozka
@@ -135,11 +129,9 @@ Ukol
         - treti polozka seznamu
 
     Nadpis druhe urovne - Obrazek
-
         obrazek psa
 
     Nadpis druhe urovne - Tabulka
-
         -------------------
         | produkt  | cena |
         -------------------
