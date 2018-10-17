@@ -43,15 +43,11 @@ Co se bude probirat
     ISO/OSI
         https://cs.wikipedia.org/wiki/Referen%C4%8Dn%C3%AD_model_ISO/OSI
 
-
-    maly boxik
-    https://cs.wikipedia.org/wiki/Hypertext_Transfer_Protocol
-
 HTTP
     textový komunikační protokol
     bezstavový
 
-    https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+    https://cs.wikipedia.org/wiki/Hypertext_Transfer_Protocol
 
     Request
         Kam
