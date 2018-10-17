@@ -9,7 +9,3 @@
 - There is [Sakura](https://github.com/oxalorg/sakura) CSS library used
     - Downloaded to `lib/sakura.css`
     - Installed with `install-lib` script that downloads lates version and puts it in lib directory
-
-## TODO
-
-- cviceni 3
