@@ -11,8 +11,8 @@ HTML
         HTML entity
             a<b
                 proc tam neni b
-
             Webovka "Character Entity Reference Chart" na googlu
+                https://dev.w3.org/html5/html-author/charref
                 &lt;
                 &gt;
                 &amp;
