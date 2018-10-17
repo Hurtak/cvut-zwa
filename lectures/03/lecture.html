@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <title>Formuláře</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Formuláře</h1>
+
+        <form
+            method="POST"
+            action="https://wa.toad.cz/~hurtapet/form.php"
+        >
+            <fieldset>
+                <legend>Povinné položky</legend>
+
+                <label>
+                    Username:
+                    <input type="text" name="username" required>
+                </label>
+
+                <br>
+
+                <label>
+                    Email:
+                    <input type="email" name="email">
+                </label>
+
+                <br>
+
+                <label>
+                    Phone:
+                    <input type="tel" name="phone">
+                </label>
+
+                <br>
+
+                <label>
+                    Password:
+                    <input type="password" name="password">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Ostatní položky</legend>
+
+                <div>
+                    Pohlaví:
+
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                        Muž
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        Žena
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="other">
+                        Ostatní
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="checkbox" name="email-me" value="1" checked>
+                        Posílat emaily o novinkách:
+                    </label>
+                </div>
+
+                <div>
+                    Zájmy:
+
+                    <label>
+                        <input type="checkbox" name="hobby[]" value="football">
+                        Fotbal
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobby[]" value="hockey">
+                        Hokej
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobby[]" value="tenis">
+                        Tenis
+                    </label>
+                </div>
+
+                <div>
+                    Kraj:
+
+                    <select name="region">
+                        <option selected value="praha">Hlavní město Praha</option>
+                        <option value="stredocesky">Středočeský kraj</option>
+                        <option value="pardubicky">Pardubický kraj</option>
+                        <option value="kralovehradecky">Královéhradecký kraj</option>
+                        <option value="liberecky">Liberecký kraj</option>
+                        <option value="ustecky">Ústecký kraj</option>
+                        <option value="karlovarsky">Karlovarský kraj</option>
+                        <option value="plzensky">Plzeňský kraj</option>
+                        <option value="jihocesky">Jihočeský kraj</option>
+                        <option value="vysocina">Kraj Vysočina</option>
+                        <option value="olomoucky">Olomoucký kraj</option>
+                        <option value="moravskoslezsky">Moravskoslezský kraj</option>
+                        <option value="zlinsky">Zlínský kraj</option>
+                        <option value="jihomoravsky">Jihomoravský kraj</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <button type="reset">Reset</button>
+            <button type="submit">Odeslat</button>
+        </form>
+    </body>
+</html>

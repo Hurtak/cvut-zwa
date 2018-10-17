@@ -1,0 +1,57 @@
+Formulare
+    form
+        method
+        action
+            url: https://wa.toad.cz/~hurtapet/form.php
+    input
+        text
+            maxlength
+        password
+        number
+            step
+            min
+            max
+        email
+
+        pristupnost
+            http://mobileinputtypes.com/
+
+        validace
+            required
+            pattern
+
+    label
+        zminit pristupnost
+
+    radio
+        name & value attributy
+    checkbox
+        vicero dat dat pres atribut name="nazevpole[]"
+    select
+        option
+        miultiple atribut
+
+    button
+        type submit
+        type reset
+
+    fieldset
+        legend
+
+HTML Formulare prehled
+    https://www.w3schools.com/html/html_forms.asp
+
+HTML validator
+    https://validator.w3.org/
+
+Ukol
+    url: https://wa.toad.cz/~hurtapet/form.php
+
+    Registracni formular
+        email
+        heslo
+        telefon
+        pohlavi
+        souhlas se zasilanim novinek na email
+
+    nezapomente na validaci polozek pomoci atributu typu required
