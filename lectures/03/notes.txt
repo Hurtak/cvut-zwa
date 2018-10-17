@@ -5,26 +5,32 @@ Formulare
             url: https://wa.toad.cz/~hurtapet/form.php
     input
         text
-            maxlength
-        password
-        number
-            step
-            min
-            max
-        email
 
-        pristupnost
-            http://mobileinputtypes.com/
-
-        validace
-            required
-            pattern
+    button type=submit
 
     label
         zminit pristupnost
 
+    input
+        password
+        number
+        email
+
+    pristupnost
+        http://mobileinputtypes.com/
+
+    validace
+        required
+        text
+            maxlength
+        number
+            step
+            min
+            max
+
     radio
         name & value attributy
+        checked
     checkbox
         vicero dat dat pres atribut name="nazevpole[]"
     select
@@ -38,11 +44,11 @@ Formulare
     fieldset
         legend
 
-HTML Formulare prehled
-    https://www.w3schools.com/html/html_forms.asp
-
 HTML validator
     https://validator.w3.org/
+
+HTML Formulare prehled
+    https://www.w3schools.com/html/html_forms.asp
 
 Ukol
     url: https://wa.toad.cz/~hurtapet/form.php
