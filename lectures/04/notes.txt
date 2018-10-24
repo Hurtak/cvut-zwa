@@ -8,94 +8,67 @@ Ukázky - stejné html - různé CSS
 
 Syntaxe
     p {color:red; text-align:center;}
-    Css komentáře (multiline)
+    Css komentáře
+        /* komentar */
     Selectory
-        Element
-        Id
-        Třída
+        Element - article
+        Id - #nazevId
+        Třída - .nazevTridy
 
     Seskupování selektorů
         h1, h2, p { color: red; }
 
     Pokročilé css selektory
         Selektor potomka
-            Body div p b
+            article h2 - vsechny nadpisy druhe urovne co se nachazi v tagu article
+
+    Pseudo selektory
+        Prvni odstavec
+            p:first-child { color: red; }
+        Po najeti mysi
+            p:hover { color: red; }
 
 Vložení css
-    Externí dokument
-        <link rel="stylesheet" type="text/css" href="mystyle.css">
     Interní <style>
+        <style>
+            p {
+                color: red;
+            }
+        </style>
     Inlinovaný styl
+        <p style="color: red;">odstavec</p>
+    Externí dokument
+        <link rel="stylesheet" type="text/css" href="cesta-ke-souboru.css">
 
 Kaskádování stylů & specificita selektoru
     http://kod.djpw.cz/xuoc
     TODO: specificita selektoru obrazek
 
-Browser default
+Ukazky
+    color: red
+    text-align: center
+    Barvy
+        red
+        #000
+        #00000
+        rgb(0, 0, 0)
+        rgba(0, 0, 0, .5)
+    Jednotky
+        px
+        em
+        %
+    Odsazeni, rozmery
+        margin
+        padding
+        border
+        width
+        height
+    box-model
+        box-sizing: content-box
+        box-sizing: border-box
 
-Text
-    Color
-    Text-align
-    Text-decoration
-        None
-        Overline
-        Underline
-        Line-through
-    Text-transform
-        Uppercase
-        Lowercase
-        Capitalize
-    Text-indent
-    Font
-        Font-family
-        Font-style
-            Normal
-            Italic
-        Font-weight
-            Normal
-            Bold
-            bolder
-    Font-size
-        Jednotky
-            Px
-            Em
-            rem
-            %
-Barvy
-    red
-    #000
-    #00000
-    rgb(0, 0, 0)
-    rgba(0, 0, 0, .5)
-List
-    List-style-type
-        Circle
-        Square
-        Upper-roman
-        Lower-alpha
-Border
-    Border: 3px solid red
-    Border-style: solid, dotted, dashed
-    Border-width: 3px
-    Border-color: red
-    border-radius
-Outline
+    Skladani marginu do sebe
 
-Margin, padding
-Margin: 1px 2px 3px 4px
-Margin: top right bottom left
-Margin: 1px 2px
-Margin: 1px 2px 3px
-
-Skladani marginu do sebe
-
-Box-model
-
-Box-sizing
-    Content-box
-    Border-box
-
-Width, height, max-width, max-height
 Display
     Block
         always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
@@ -110,18 +83,22 @@ Skrývání elementů
     Display: none
     Visibility: hidden
 
-Pseudo třídy http://www.w3schools.com/css/css_pseudo_classes.asp
+Pseudo třídy 
+    http://www.w3schools.com/css/css_pseudo_classes.asp
     a:visited
     a:hover
     a:active
+    a:focus
     p:first-child
-    :last-child
-    :nth-child
-    :not
-    :focus
-    :checked
-    :disabled
-    :invalid
+    p:last-child
+    p:nth-child
+    input:checked
+    input:disabled
+    input:invalid
+
+-----------------
+- dalsi cviceni -
+-----------------
 
 Position
     Static
