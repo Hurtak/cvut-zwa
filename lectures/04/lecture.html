@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4. cvičení</title>
+        <meta charset="utf-8">
+
+        <!-- Odkaz na externí css. -->
+        <link rel="stylesheet" type="text/css" href="lecture.css">
+    </head>
+    <body>
+        <h1>4. cvičení HTML</h1>
+
+        <h2>Ukázky principů CSS</h2>
+        <ul>
+            <li><a href="http://www.w3schools.com/css/css_intro.asp">http://www.w3schools.com/css/css_intro.asp</a></li>
+            <li><a href="http://www.csszengarden.com">http://www.csszengarden.com</a></li>
+        </ul>
+
+        <h2>Selektory</h2>
+        <ul class="selectors">
+            <li class="one">text text</li>
+            <li>text text</li>
+            <li class="two">text text</li>
+            <li class="three">text text</li>
+            <li class="four">
+                text text
+                <ul>
+                    <li>text</li>
+                    <li class="four-nested">text</li>
+                    <li class="four-nested">text</li>
+                </ul>
+            </li>
+            <li>text text</li>
+        </ul>
+        <style>
+            /* Takovyto zapis stylu kdyz jsou promo v HTML pouzivejte jenom
+               vyjimecne. Ve vetsine pripadu je nejlepsi pouzit odkaz na
+               externi CSS soubor pres <link> znacku v hlavicce.
+               Zde pouzivame <style> znacku jenom z duvodu prehlednosti pro
+               dane priklady.
+             */
+
+            /* Jeden element */
+            .one { background-color: red; }
+
+            /* Dva elementy */
+            .two, .three  { background-color: orange; }
+
+            /* Zanořené elementy */
+            .four .four-nested  { background-color: lightblue; }
+        </style>
+
+        <h2>Barvy</h2>
+        <ul>
+            <li style="color: red">color: red</li>
+            <li style="color: rgb(255, 0 ,0)">color: rgb(255, 0 ,0)</li>
+            <li style="color: #ff0000">color: #ff0000</li>
+            <li style="color: rgba(255, 0, 0, 0.5)">color: rgba(255, 0, 0, 0.5)</li>
+        </ul>
+
+        <h2>Text</h2>
+        <ul class="text">
+            <li style="font-size: 12px">font-size: 12px</li>
+            <li style="font-size: 1em">font-size: 1em</li>
+            <li style="font-size: 1.5em">font-size: 1.5em</li>
+        </ul>
+
+        <ul>
+            <li style="text-align: left">text-align: left</li>
+            <li style="text-align: center">text-align: center</li>
+            <li style="text-align: right">text-align: right</li>
+        </ul>
+
+        <ul>
+            <li style="text-decoration: none">text-decoration: none</li>
+            <li style="text-decoration: overline">text-decoration: overline</li>
+            <li style="text-decoration: underline">text-decoration: underline</li>
+            <li style="text-decoration: line-throught">text-decoration: underline</li>
+        </ul>
+
+        <ul>
+            <li style="text-transform: uppercase">text-transform: uppercase</li>
+            <li style="text-transform: lowercase">text-transform: lowercase</li>
+            <li style="text-transform: capitalize">text-transform: capitalize</li>
+        </ul>
+
+        <ul>
+            <li style="text-indent: 50px">text-indent: 50px Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium ipsum nec quam tempus pulvinar. Fusce quis ligula ac eros convallis tincidunt sagittis vel metus. Vestibulum vel tortor libero. Donec sed dapibus erat. Fusce ultrices, mi a faucibus vulputate, odio nulla consectetur nibh, id varius leo mauris consectetur lacus. Ut eu lacus mauris. Phasellus turpis sem, porta vitae felis sed, auctor egestas nisi. Nam feugiat lorem non eleifend auctor. Aenean fringilla, ante eu ultrices commodo, velit odio tincidunt leo, quis lobortis nibh quam ut mauris.</li>
+        </ul>
+
+        <ul>
+            <li style="font-family: serif">font-family: serif</li>
+            <li style="font-family: sans-serif">font-family: sans-serif</li>
+            <li style="font-family: monospace">font-family: monospace</li>
+            <li style="font-family: Arial, 'Times New Roman'">font-family: Arial, 'Times New Roman'</li>
+        </ul>
+
+        <ul>
+            <li style="font-style: normal">font-style: normal</li>
+            <li style="font-style: italic">font-style: italic</li>
+        </ul>
+
+        <ul>
+            <li style="font-weight: normal">font-weight: normal</li>
+            <li style="font-weight: bold">font-weight: bold</li>
+        </ul>
+
+        <h2>Seznamy</h2>
+        <ul>
+            <li>text text</li>
+            <li style="list-style-type: circle">list-style-type: circle</li>
+        </ul>
+
+        <h2>Skrývání elementu</h2>
+        <ul>
+            <li>text před display:none</li>
+            <li style="display: none">display:none</li>
+            <li>text po display:none</li>
+            <li>text před visibility:hidden</li>
+            <li style="visibility: hidden">visibility:hidden</li>
+            <li>text po visibility:hidden</li>
+        </ul>
+
+        <h2>Ráměčky</h2>
+        <ul>
+            <li style="border: 1px solid red">border: 1px solid red</li>
+            <li style="border: 3px dotted blue">border: 3px dotted blue</li>
+            <li style="border: 5px dashed orange">border: 5px dotted orange</li>
+        </ul>
+
+        <h2>Display</h2>
+        <p class="block">Blokovy element</p>
+        <p class="block block-200">Blokovy element se změněnou velikostí</p>
+        <p class="block">Blokovy element</p>
+        <br>
+        <span class="inline-block">inline-block element</span>
+        <span class="inline-block">inline-block element</span>
+        <span class="inline-block">inline-block element</span>
+        <br>
+        <span class="inline">inline element</span>
+        <span class="inline">inline element</span>
+        <span class="inline">inline element</span>
+
+        <style>
+            .block {
+                /* Blokový element má rozměr na celou šířku, pokud není
+                   nastaveno jinak. */
+                display: block;
+                background: orange;
+            }
+            .block-200 {
+                width: 200px;
+            }
+            .inline-block {
+                /* Hybrid mezi block a inline. Je možné nastavovat rozměry
+                   jako block elementu, ale velikost si standardně bere z
+                   rozměrů svého obsahu. */
+                display: inline-block;
+                height: 50px;
+                background: lightgreen;
+            }
+            .inline {
+                display: inline;
+                /* Velikostní hodnoty jsou u inline elementů ignorovány,
+                   rozměry se určují podle velikosti obsahu */
+                height: 50px;
+                background: lightblue;
+            }
+        </style>
+
+        <h2>Box model</h2>
+        <div class="box">box 200px</div>
+        <div class="box border-box">box 200px s box-sizing: border-box;</div>
+        <style>
+            .box {
+                background: orange;
+                border: 10px solid red;
+                padding: 10px;
+                margin: 10px;
+                width: 200px;
+                height: 200px;
+            }
+            .border-box {
+                box-sizing: border-box;
+            }
+        </style>
+
+        <h2>Position</h2>
+        <div class="box-big">
+            <p>text</p>
+            <div class="box-small relative">position: relative</div>
+            <div class="box-small absolute">position: absolute</div>
+            <div class="box-small fixed">position: fixed</div>
+            <p>text</p>
+        </div>
+        <style>
+            .box-big {
+                width: 200px;
+                height: 200px;
+                background: lightblue;
+                border: 10px solid orange;
+                position: relative;
+            }
+            .box-small {
+                display: inline-block;
+                background: lightgreen;
+                border: 3px solid red;
+            }
+
+            .relative {
+                position: relative;
+                left: 10px;
+                top: 10px;
+            }
+
+            .absolute {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+            }
+
+            .fixed {
+                position: fixed;
+                right: 10px;
+                bottom: 10px;
+            }
+        </style>
+
+        <h2>TODO: float, border-radius, pseudoelementy</h2>
+    </body>
+</html>

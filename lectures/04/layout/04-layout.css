@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+}
+
+.Page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.Page-header {
+    background: lightblue;
+}
+
+.Page-content {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+
+    background: red;
+}
+
+.Page-content-nav {
+    flex-shrink: 0;
+
+    background: yellow;
+}
+
+.Page-content-main {
+    flex-grow: 1;
+
+    background: darkorange;
+}
+
+.Page-content-aside {
+    width: 200px;
+    flex-shrink: 0;
+
+    background: darkcyan;
+}
+
+.Page-footer {
+    background: lightgreen;
+}
+
+@media (max-width: 700px) {
+    .Page-content {
+        flex-direction: column;
+    }
+
+    .Page-content-nav {
+        width: 100%;
+    }
+
+    .Page-content-aside {
+        width: 100%;
+    }
+
+    .Page-footer {
+        background: lightgreen;
+    }
+}
+
+@media print {
+    .Page-content-aside {
+        display: none;
+    }
+}
