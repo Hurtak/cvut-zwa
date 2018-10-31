@@ -9,3 +9,16 @@
 - There is [Sakura](https://github.com/oxalorg/sakura) CSS library used
     - Downloaded to `lib/sakura.css`
     - Installed with `install-lib` script that downloads lates version and puts it in lib directory
+
+## TODO
+
+- 04
+    - sekce velikostni jednotky
+    - lepsi priklad u em + rem
+    - border-radius
+    - pseudo selektory
+- 05
+    - media queries
+    - pseudo elementy
+    - float
+    - flex
