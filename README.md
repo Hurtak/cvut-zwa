@@ -20,5 +20,4 @@
 - 05
     - media queries
     - pseudo elementy
-    - float
     - flex
