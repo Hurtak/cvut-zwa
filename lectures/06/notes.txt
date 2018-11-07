@@ -8,8 +8,9 @@
 ---
 
 Ukázka testu
-    https://docs.google.com/document/u/0/
-    Projít zadání testů
+    K čemu slouží HTML značka <ul> ?
+    Výjmenujte které nejdůležitější atributy se nastavují u HTML elementu <form> a popiště k čemu jsou.
+    Jaké znáte délkové/velikostní jednotky v CSS a co znamenají? Výjmenujte alespoň tři.
 
 Javascript
 Logika a interakce v r ámci webové stránky
@@ -86,6 +87,4 @@ var p = document.querySelector("p");
 var posluchac = function() {
     alert("kliknuto");
 }
-1/14/2017 OneNote Online
-https://onedrive.live.com/edit.aspx?resid=25DAF6EBC9B88E5!52479&cid=025daf6ebc9b88e5&app=OneNote 3/3
 Elelemt.addEventListener('click')
