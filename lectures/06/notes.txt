@@ -1,0 +1,91 @@
+- zakladni datove typy
+- pripojeni javascriptu
+    - script tag inline
+    - externi soubor
+    - posloupnost nacteni
+
+
+---
+
+Ukázka testu
+    https://docs.google.com/document/u/0/
+    Projít zadání testů
+
+Javascript
+Logika a interakce v r ámci webové stránky
+Něco se děje bez změny str ánky
+Mapy, chat, hry, aplikace, …
+F12 → Console → zkoušet!
+2 + 2
+• Jak zapojit do stránky
+    ○ Inline
+        • anclick="alert(1)"
+    ○ Script tag
+        ○ Externí script
+
+• Proměnné
+• Datové typy
+○ Bool
+○ String
+○ Number
+○ Null
+○ Undefined
+○ Array
+○ Objekt
+• Funkce
+function add(a, b) { 
+    return a+b; 
+}
+• If
+○ Dynamic typing: proměnn á mění typ dle potřeby
+• Console
+○ Console.log
+• Alert
+• Confirm
+Složitější datové typy: pole, "objekt", funkce
+Předávány odkazem
+Striktně vzato je všechno objekt; "objekt" je množina dvojic kl íč­hodnota
+if (a && b) { ... }
+for (var i=0; i<pole.length; i++) { ... }
+
+
+API poskytovan á prohlížečem
+Přístup k vykreslen é stránce
+Síťová komunikace
+Periferie: repro/mikrofon, OpenGL, senzory (mobil), GPS
+Lokální ukládání dat
+Omezená práce se souborov ým systémem
+DOM
+Document Object Model
+API pro práci se stránkou, resp. stromem HTML uzl ů
+Možnost programově měnit cokoliv uživatel vid í
+Kontrola formul ářů
+Globální proměnné window a document
+DOM: dotazov ání
+var druhyOdkaz = document.querySelectorAll("a")[1];
+var obrazek = document.querySelector("p > img");
+var odstavec = obrazek.parentNode;
+var potomek = odstavec.firstChild;
+alert(odstavec.innerHTML);
+DOM: manipulace
+var odstavec = document.querySelector("p");
+odstavec.innerHTML = "Generov áno <em>skriptem</em>";
+var obrazek = document.createElement("img");
+obrazek.src = "...";
+odstavec.appendChild(obrazek);
+DOM: události
+JavaScript je (na klientu) navržen tak, aby neobsahoval ž ádná blokující volání
+Programování řízené událostmi
+"Až nastane X, vykonej funkci Y"
+DOM: terminologie ud álostí
+Událost je nějakého typu ("click", "mousemove", "load",  …)
+Událost vzniká na nějakém DOM prvku (nap ř. ten, na které m bylo kliknuto)
+Pro událost je možno definovat několik posluchačů = funkcí
+DOM: události v kostce
+var p = document.querySelector("p");
+var posluchac = function() {
+    alert("kliknuto");
+}
+1/14/2017 OneNote Online
+https://onedrive.live.com/edit.aspx?resid=25DAF6EBC9B88E5!52479&cid=025daf6ebc9b88e5&app=OneNote 3/3
+Elelemt.addEventListener('click')
