@@ -1,0 +1,29 @@
+test
+
+prihlaseni na wa.toad.cz
+    ssh username@wa.toad.cz
+
+    defaultni heslo
+        "webove aplikace"
+
+    prikazy
+        passwd
+        ls
+        cd
+        mkdir
+        touch
+        nano
+
+    ubuntu spravce souboru stfp://username@wa.toad.cz
+
+    image url parts
+        http://big.info/2017/04/difference-uri-url-urn.html
+
+http://php.net/manual/en/index.php
+
+ukazka
+    <?php
+        echo "Ahoj";
+    ?>
+
+priklady
