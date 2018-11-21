@@ -2,10 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>6. cvičení</title>
+        <title>8. cvičení</title>
     </head>
     <body>
-        <h1>6. cvičení</h1>
+        <h1>8. cvičení</h1>
 
         <p>
             Ukoly z
