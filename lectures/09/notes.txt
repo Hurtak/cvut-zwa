@@ -1,0 +1,12 @@
+kondicionalni vypis html
+    <?php if (true) { ?>
+        <div>sablona</div>
+    <?php } ?>
+
+vypis php dat do stranky
+    htmlspecialchars($data, ENT_QUOTES);
+
+count
+empty
+isset
+strlen
