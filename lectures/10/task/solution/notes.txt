@@ -2,6 +2,10 @@ include/require/include once/require once
 
 tridy
 
+ulozeni do souboru
+
+check ze uzivatel existuje
+
 Ukladani hesel
     cisty text
     klasice sifrovani obousmerne
