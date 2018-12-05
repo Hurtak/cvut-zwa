@@ -1,0 +1,20 @@
+include/require/include once/require once
+
+tridy
+
+Ukladani hesel
+    cisty text
+    klasice sifrovani obousmerne
+    jednosmerna sifra
+        stejna hesla maji jednu hash
+            Crackování md5 pomocí googlu
+            K čemu jsou vůbec normální hashe (md5), např ověřování staženého souborů
+            https://crackstation.net/hashing-security.htm
+                Predpocitane tabulky s hashe
+                Bruteforce
+                Slovnikove utoky
+        saltovani (soleni) hesel
+            obrana proti dve stejna hesla
+            obrana proti predpocitane tabulky
+        pouzijte primo hashe urcena k hashovani
+            bcrypt, scrypt
