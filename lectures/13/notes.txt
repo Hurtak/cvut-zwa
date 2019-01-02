@@ -1,0 +1,18 @@
+Api
+    What is API
+    machine readable data (compared to human readable HTML in browsers)
+
+Api
+    User goes to http://wa.toad.cz/~username/index.php
+        -> Browser HTTP GET /index.php
+        -> Server HTTP response HTML
+    User fills username field
+        -> JavaScript HTTP GET /api/username-avaliable.php
+        -> Server response
+            data: JSON
+            status code
+            headers
+                Content-Type: application/json
+        -> JavaScript reads server statuscode and response
+        -> JavaScript parses HTTP response and reads the data
+        -> Javascript updated the document
