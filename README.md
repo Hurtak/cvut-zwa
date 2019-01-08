@@ -1,6 +1,6 @@
 # ZWA
 
-- Notes and example that are part of the ZWA course on CVUT
+- Notes and examples that are part of the ZWA course on CVUT
 - Hosted on https://hurtak.github.io/cvut-zwa/ with [GitHub Pages](https://pages.github.com/)
 
 ## Project structure
