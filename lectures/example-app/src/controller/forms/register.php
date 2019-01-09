@@ -1,6 +1,6 @@
 <?php
 
-function controllerRegister($form) {
+function controllerFormRegister($form) {
     $username = $form->getRawValue("username");
     if (!$username) {
         $form->errors[] = "usernameEmpty";
@@ -29,5 +29,5 @@ function controllerRegister($form) {
 
     $form->deps["db"]->addUser($username, $password);
     $form->deps["user"]->logIn($username);
-    redirectAndExit("/users.php");
+    ControllerUtils::redirectAndExit("/users.php");
 }

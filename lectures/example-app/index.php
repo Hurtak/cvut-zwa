@@ -6,18 +6,18 @@ require "src/app.php";
 <!DOCTYPE html>
 <html>
     <head>
-        <?php require SRC_DIR . "/views/metadata.php" ?>
+        <?php require SRC_DIR . "/view/metadata.php" ?>
         <title>Login/Register</title>
     </head>
     <body>
-        <?php require SRC_DIR . "/views/header.php" ?>
+        <?php require SRC_DIR . "/view/header.php" ?>
 
         <h1>Register/Login</h1>
 
         <h2>Registrační formulář</h2>
 
         <form method="POST">
-            <?php $form->writeCsrfToken() ?>
+            <?php $app->form->writeCsrfToken() ?>
 
             <div>
                 Jmeno:
@@ -25,19 +25,19 @@ require "src/app.php";
                     type="text"
                     name="username"
                     class="js-username"
-                    value="<?php if ($form->isSubmitted("register")) $form->writeEscapedValue("username") ?>"
+                    value="<?php if ($app->form->isSubmitted("register")) $app->form->writeEscapedValue("username") ?>"
                 >
 
-                <?php if ($form->isSubmitted("register")) { ?>
-                    <?php if ($form->isError("usernameEmpty")) { ?>
+                <?php if ($app->form->isSubmitted("register")) { ?>
+                    <?php if ($app->form->isError("usernameEmpty")) { ?>
                         <div class="formerror">Prosím vyplňte uživatelské jméno</div>
-                    <?php } else if ($form->isError("usernameTooShort")) { ?>
+                    <?php } else if ($app->form->isError("usernameTooShort")) { ?>
                         <div class="formerror">Uživatelské jméno musí mít alespoň 3 znaky</div>
                     <?php } ?>
                 <?php } ?>
                 <div
                     class="formerror js-username-error"
-                    <?php if (!($form->isSubmitted("register") && $form->isError("usernameTaken"))) echo "hidden" ?>
+                    <?php if (!($app->form->isSubmitted("register") && $app->form->isError("usernameTaken"))) echo "hidden" ?>
                 >
                     Uživatelské jméno již existuje
                 </div>
@@ -49,12 +49,12 @@ require "src/app.php";
                 <input type="password" name="password">
                 <input type="password" name="passwordAgain">
 
-                <?php if ($form->isSubmitted("register")) { ?>
-                    <?php if ($form->isError("passwordEmpty")) { ?>
+                <?php if ($app->form->isSubmitted("register")) { ?>
+                    <?php if ($app->form->isError("passwordEmpty")) { ?>
                         <div class="formerror">Prosím vyplňte heslo</div>
-                    <?php } else if ($form->isError("passwordTooShort")) { ?>
+                    <?php } else if ($app->form->isError("passwordTooShort")) { ?>
                         <div class="formerror">Heslo musí mít alespoň 5 znaků.</div>
-                    <?php } else if ($form->isError("passwordsDoNotMatch")) { ?>
+                    <?php } else if ($app->form->isError("passwordsDoNotMatch")) { ?>
                         <div class="formerror">Hesla se neshodují.</div>
                     <?php } ?>
                 <?php } ?>
@@ -72,20 +72,20 @@ require "src/app.php";
         <h2>Login formulář</h2>
 
         <form method="POST">
-            <?php $form->writeCsrfToken() ?>
+            <?php $app->form->writeCsrfToken() ?>
 
             <div>
                 Jmeno:
                 <input
                     type="text"
                     name="username"
-                    value="<?php if ($form->isSubmitted("login")) $form->writeEscapedValue("username") ?>"
+                    value="<?php if ($app->form->isSubmitted("login")) $app->form->writeEscapedValue("username") ?>"
                 >
 
-                <?php if ($form->isSubmitted("login")) { ?>
-                    <?php if ($form->isError("usernameEmpty")) { ?>
+                <?php if ($app->form->isSubmitted("login")) { ?>
+                    <?php if ($app->form->isError("usernameEmpty")) { ?>
                         <div class="formerror">Prosím vyplňte uživatelské jméno</div>
-                    <?php } else if ($form->isError("userDoesNotExist")) { ?>
+                    <?php } else if ($app->form->isError("userDoesNotExist")) { ?>
                         <div class="formerror">Uživatelské jméno neexistuje</div>
                     <?php } ?>
                 <?php } ?>
@@ -95,10 +95,10 @@ require "src/app.php";
                 Heslo:
                 <input type="password" name="password">
 
-                <?php if ($form->isSubmitted("login")) { ?>
-                    <?php if ($form->isError("passwordEmpty")) { ?>
+                <?php if ($app->form->isSubmitted("login")) { ?>
+                    <?php if ($app->form->isError("passwordEmpty")) { ?>
                         <div class="formerror">Prosím vyplňte heslo</div>
-                    <?php } else if ($form->isError("passwordInvalid")) { ?>
+                    <?php } else if ($app->form->isError("passwordInvalid")) { ?>
                         <div class="formerror">Heslo je špatně zadané</div>
                     <?php } ?>
                 <?php } ?>
@@ -113,7 +113,7 @@ require "src/app.php";
             </button>
         </form>
 
-        <?php require SRC_DIR . "/views/footer.php" ?>
+        <?php require SRC_DIR . "/view/footer.php" ?>
         <script src="<?php echo STATIC_DIR ?>/username-available.js"></script>
     </body>
 </html>

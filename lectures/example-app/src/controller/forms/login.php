@@ -1,6 +1,6 @@
 <?php
 
-function controllerLogin($form) {
+function controllerFormLogin($form) {
     $username = $form->getRawValue("username");
     if (!$username) {
         $form->errors[] = "usernameEmpty";
@@ -28,5 +28,5 @@ function controllerLogin($form) {
     }
 
     $form->deps["user"]->logIn($username);
-    redirectAndExit("/users.php");
+    ControllerUtils::redirectAndExit("/users.php");
 }

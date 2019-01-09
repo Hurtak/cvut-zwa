@@ -1,10 +1,10 @@
 <?php
 
-function controllerLogout($form) {
+function controllerFormLogout($form) {
     if (!$form->deps["user"]->isLoggedIn()) {
         return;
     }
 
     $form->deps["user"]->logOut();
-    redirectAndExit("/index.php");
+    ControllerUtils::redirectAndExit("/index.php");
 }

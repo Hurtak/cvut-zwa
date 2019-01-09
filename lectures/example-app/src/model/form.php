@@ -1,9 +1,5 @@
 <?php
 
-require SRC_DIR . "/controllers/login.php";
-require SRC_DIR . "/controllers/logout.php";
-require SRC_DIR . "/controllers/register.php";
-
 class Form {
     public $deps = [];
     public $request = [];
@@ -14,16 +10,6 @@ class Form {
         $this->request = $options["request"];
 
         $this->csrfProtection();
-
-        if ($this->isSubmitted("login")) {
-            controllerLogin($this);
-        } else if ($this->isSubmitted("logout")) {
-            controllerLogout($this);
-        } else if ($this->isSubmitted("register")) {
-            controllerRegister($this);
-        } else if (!empty($this->request)) {
-            throw new Exception("Unknown form submitted");
-        }
     }
 
     public function isSubmitted($formName) {
@@ -40,7 +26,7 @@ class Form {
         if (!$rawValue) {
             return "";
         }
-        writeEscapedValue($rawValue);
+        Filters::writeEscapedValue($rawValue);
     }
 
     public function isError($errorName) {
@@ -52,6 +38,8 @@ class Form {
     }
 
     private function csrfProtection() {
+        // https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet
+
         // Set CSRF token if there is not any
         if (!isset($_SESSION["csrf"])) {
             $_SESSION["csrf"] = bin2hex(openssl_random_pseudo_bytes(16));
