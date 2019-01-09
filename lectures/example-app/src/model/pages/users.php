@@ -1,7 +1,6 @@
 <?php
 
 function getDataForPageUsers($db) {
-    // Pagination
     $users = $db->getUsers();
 
     $itemsPerPage = 5;
