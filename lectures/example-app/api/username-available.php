@@ -12,7 +12,7 @@ if (!isset($_GET["username"])) {
     exit();
 }
 
-$usernameAvailable = !$db->userExists($_GET["username"]);
+$usernameAvailable = !$app->db->userExists($_GET["username"]);
 http_response_code(200);
 echo json_encode([
     "usernameAvailable" => $usernameAvailable

@@ -1,8 +1,8 @@
 <?php
 
 class User {
-	public $loggedUser;
 	private $deps;
+	private $loggedUser;
 
 	public function __construct($options) {
 		$this->deps = $options["deps"];
@@ -20,6 +20,10 @@ class User {
 
 	public function isLoggedIn() {
 		return (boolean)$this->loggedUser;
+	}
+
+	public function getLoggedUser() {
+		return $this->loggedUser;
 	}
 
 	public function logIn($username) {

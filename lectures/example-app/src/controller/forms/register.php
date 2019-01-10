@@ -1,33 +1,33 @@
 <?php
 
-function controllerFormRegister($form) {
-    $username = $form->getRawValue("username");
+function controllerFormRegister($deps) {
+    $username = $deps["form"]->getValue("username");
     if (!$username) {
-        $form->errors[] = "usernameEmpty";
+        $deps["form"]->addError("usernameEmpty");
     } else if (strlen($username) < 3) {
-        $form->errors[] = "usernameTooShort";
+        $deps["form"]->addError("usernameTooShort");
     } else {
-        $usernameTaken = $form->deps["db"]->userExists($username);
+        $usernameTaken = $deps["db"]->userExists($username);
         if ($usernameTaken) {
-            $form->errors[] = "usernameTaken";
+            $deps["form"]->addError("usernameTaken");
         }
     }
 
-    $password = $form->getRawValue("password");
-    $passwordAgain = $form->getRawValue("passwordAgain");
+    $password = $deps["form"]->getValue("password");
+    $passwordAgain = $deps["form"]->getValue("passwordAgain");
     if (!$password) {
-        $form->errors[] = "passwordEmpty";
+        $deps["form"]->addError("passwordEmpty");
     } else if (strlen($password) < 5) {
-        $form->errors[] = "passwordTooShort";
+        $deps["form"]->addError("passwordTooShort");
     } else if ($password !== $passwordAgain) {
-        $form->errors[] = "passwordsDoNotMatch";
+        $deps["form"]->addError("passwordsDoNotMatch");
     }
 
-    if (!$form->isValid()) {
+    if (!$deps["form"]->isValid()) {
         return;
     }
 
-    $form->deps["db"]->addUser($username, $password);
-    $form->deps["user"]->logIn($username);
+    $deps["db"]->addUser($username, $password);
+    $deps["user"]->logIn($username);
     ControllerUtils::redirectAndExit("/users.php");
 }

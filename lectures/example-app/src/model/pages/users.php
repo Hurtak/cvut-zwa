@@ -1,11 +1,11 @@
 <?php
 
-function getDataForPageUsers($db) {
-    $users = $db->getUsers();
+function getDataForPageUsers($deps) {
+    $users = $deps["db"]->getUsers();
 
     $itemsPerPage = 5;
     $pageMin = 1;
-    $pageMax = (int)max(ceil((count($users) / $itemsPerPage)), 1);
+    $pageMax = (int)max(ceil(count($users) / $itemsPerPage), 1);
 
     $pageSelected = isset($_GET["page"]) ? (int)$_GET["page"] : $pageMin;
     if ($pageSelected < $pageMin) {

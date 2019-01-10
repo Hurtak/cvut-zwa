@@ -1,32 +1,32 @@
 <?php
 
-function controllerFormLogin($form) {
-    $username = $form->getRawValue("username");
+function controllerFormLogin($deps) {
+    $username = $deps["form"]->getValue("username");
     if (!$username) {
-        $form->errors[] = "usernameEmpty";
+        $deps["form"]->addError("usernameEmpty");
     }
 
-    $password = $form->getRawValue("password");
+    $password = $deps["form"]->getValue("password");
     if (!$password) {
-        $form->errors[] = "passwordEmpty";
+        $deps["form"]->addError("passwordEmpty");
     }
 
-    if (!$form->isValid()) {
+    if (!$deps["form"]->isValid()) {
         return;
     }
 
-    $dbUser = $form->deps["db"]->getUser($username);
+    $dbUser = $deps["db"]->getUser($username);
     if (!$dbUser) {
-        $form->errors[] = "userDoesNotExist";
+        $deps["form"]->addError("userDoesNotExist");
         return;
     }
 
     $passwordValid = password_verify($password, $dbUser["password"]);
     if (!$passwordValid) {
-        $form->errors[] = "passwordInvalid";
+        $deps["form"]->addError("passwordInvalid");
         return;
     }
 
-    $form->deps["user"]->logIn($username);
+    $deps["user"]->logIn($username);
     ControllerUtils::redirectAndExit("/users.php");
 }

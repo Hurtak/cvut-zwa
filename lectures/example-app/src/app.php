@@ -16,16 +16,6 @@ require SRC_DIR . "/controller/forms/login.php";
 require SRC_DIR . "/controller/forms/logout.php";
 require SRC_DIR . "/controller/forms/register.php";
 
-/*
-
-TODOS
-    - controllers are weird, they take form instance and modify it :o
-    - getDataForPage and controllerForm maybe should be in some namespace or something?
-        also automatic calling of these function based on form/page name would be nice
-    - filters are little weird, also there is only one function in there
-
-*/
-
 class App {
     public $db;
     public $user;
@@ -52,27 +42,33 @@ class App {
             "request" => $_POST
         ]);
 
+        $deps = [
+            "db" => $db,
+            "form" => $form,
+            "user" => $user
+        ];
+
         // Controller handles form requests
         if ($form->isSubmitted("login")) {
-            controllerFormLogin($form);
+            controllerFormLogin($deps);
         } else if ($form->isSubmitted("logout")) {
-            controllerFormLogout($form);
+            controllerFormLogout($deps);
         } else if ($form->isSubmitted("register")) {
-            controllerFormRegister($form);
-        } else {
-            throw new Exception("Unknown form submitted");
+            controllerFormRegister($deps);
         }
 
         // Controller gathers data needed to render current page
         $pageData = [];
-        switch ($_SERVER['REQUEST_URI']) {
-            case ROOT_URL . '/':
-            case ROOT_URL . '/index.php':
-                $pageData = getDataForPageIndex();
+        $routeFull = parse_url($_SERVER['REQUEST_URI'])["path"];
+        $route = str_replace(ROOT_URL, "", $routeFull);
+        switch ($route) {
+            case '/':
+            case '/index.php':
+                $pageData = getDataForPageIndex($deps);
                 break;
 
-            case ROOT_URL . '/user.php':
-                $pageData = getDataForPageUsers($db);
+            case '/users.php':
+                $pageData = getDataForPageUsers($deps);
                 break;
 
             default:
@@ -89,5 +85,5 @@ class App {
     }
 }
 
-$app = main();
+$app = new App();
 

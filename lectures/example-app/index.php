@@ -25,7 +25,7 @@ require "src/app.php";
                     type="text"
                     name="username"
                     class="js-username"
-                    value="<?php if ($app->form->isSubmitted("register")) $app->form->writeEscapedValue("username") ?>"
+                    value="<?php if ($app->form->isSubmitted("register")) $app->filters::escape($app->form->getValue("username")) ?>"
                 >
 
                 <?php if ($app->form->isSubmitted("register")) { ?>
@@ -79,7 +79,7 @@ require "src/app.php";
                 <input
                     type="text"
                     name="username"
-                    value="<?php if ($app->form->isSubmitted("login")) $app->form->writeEscapedValue("username") ?>"
+                    value="<?php if ($app->form->isSubmitted("login")) $app->filters->escape($app->form->getValue("username")) ?>"
                 >
 
                 <?php if ($app->form->isSubmitted("login")) { ?>

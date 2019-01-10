@@ -15,16 +15,16 @@ require "src/app.php";
         <h1>Zaregistrovaní uživatelé</h1>
 
         <ul>
-            <?php foreach ($app->pageData["usersSliced"] as $user) { ?>
+            <?php foreach ($app->page["usersSliced"] as $user) { ?>
                 <li>
-                    <?php $app->filters::writeEscapedValue($user["username"]) ?>
+                    <?php $app->filters::escape($user["username"]) ?>
                 </li>
             <?php } ?>
         </ul>
 
-        <?php if ($app->pageData["pageMax"] > 1) { ?>
-            <?php for ($page = $app->pageData["pageMin"]; $page <= $app->pageData["pageMax"]; $page++) { ?>
-                <?php if ($app->pageData["pageSelected"] === $page) { ?>
+        <?php if ($app->page["pageMax"] > 1) { ?>
+            <?php for ($page = $app->page["pageMin"]; $page <= $app->page["pageMax"]; $page++) { ?>
+                <?php if ($app->page["pageSelected"] === $page) { ?>
                     <span><?php echo $page ?></span>
                 <?php } else { ?>
                     <a href="?page=<?php echo $page ?>"><?php echo $page ?></a>

@@ -1,9 +1,9 @@
 <?php
 
 class Form {
-    public $deps = [];
-    public $request = [];
-    public $errors = [];
+    private $deps = [];
+    private $request = [];
+    private $errors = [];
 
 	public function __construct($options) {
         $this->deps = $options["deps"];
@@ -17,16 +17,12 @@ class Form {
             $this->request["form-name"] === $formName;
     }
 
-    public function getRawValue($key) {
-        return isset($this->request[$key]) ? $this->request[$key] : null;
+    public function addError($errorIdentifier) {
+        array_push($this->errors, $errorIdentifier);
     }
 
-    public function writeEscapedValue($key) {
-        $rawValue = $this->getRawValue($key);
-        if (!$rawValue) {
-            return "";
-        }
-        Filters::writeEscapedValue($rawValue);
+    public function getValue($key) {
+        return isset($this->request[$key]) ? $this->request[$key] : null;
     }
 
     public function isError($errorName) {
