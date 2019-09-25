@@ -1,62 +1,60 @@
-Predstaveni
+Introduction
 
-Prihlaseni na pocitace - nastaveni hesla
-    V boot menu vybrat polozku nastaveni hesla
-    Pote se prihlasit pres guest settion
-    Pockat nez vyskoci prohlizec se strankou nastaveni hesel
-    Vybrat odkaz s nastavenim hesel pro ucebnu KNE:310/KNE:311
-    Nastavit heslo
-    Restartovat pocitac
+Login to computers, password settings
+    In boot menu select password settings option
+    Log in as a guest
+    Wait for browser window to show up
+    Select link with password selection for room KNE:310/KNE:311
+    Set password
+    Restart PC
 
-Zminit spravny email a odkaz na seznam cvicicich
-    petr.hurtak@gmail.com
+tiny.cc/zwa
 
-Wiki predmetu
+Wiki
     https://cw.fel.cvut.cz
-        zahledat zwa
+        search ZWA in current year
     https://cw.fel.cvut.cz/wiki/courses/b6b39zwa/start
-    Projit napln predmetu (lectures)
-    Projit hodnoceni
+    Lectures structure
+    Rating of students
 
-Co se bude probirat
-    Clovek jde na www.seznam.cz, co vsechno se deje po ceste
+User enters URL, what happens
+    User goes to www.seznam.cz, what happens and what will be covered in lecture
 
-    Uzivatel
+    User
         OS
-        Prohlizec
+        Browser
         URL
-    Prenos
+    Data transfer
         DNS
         TCP/IP
         HTTP
     Server
-        OS serveru
-        Webovy server
+        server OS
+        Web server
             PHP
             HTML
             CSS
             JS
-    Browser zobrazi odpoved
+    Browser interprets the response
 
-    Pekny clanek k tematu
+    Nice article
         https://medium.com/@maneesha.wijesinghe1/what-happens-when-you-type-an-url-in-the-browser-and-press-enter-bb0aa2449c1a
     ISO/OSI
         https://cs.wikipedia.org/wiki/Referen%C4%8Dn%C3%AD_model_ISO/OSI
-    Prehled protokolu
+    Network protocols overview
         https://cs.wikipedia.org/wiki/TCP/IP
 
-Ukazky
-    dns preklad z domeny na ip
+Examples
+    dns - from domain to IP
         host example.com
     ip+http
         curl -v http://example.com
-
-    tyto prikazy je nozne vyzkouset take na
+    you can try online on
         https://ping.eu/
 
 HTTP
-    textový komunikační protokol
-    bezstavový
+    text transfer protocol
+    stateless protocol
 
     https://cs.wikipedia.org/wiki/Hypertext_Transfer_Protocol
 
@@ -71,4 +69,8 @@ HTTP
         Hlavicka
         Telo
 
-Zacatek HTML
+    mention
+        http2
+        http3?
+
+HTML basics
