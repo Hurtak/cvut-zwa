@@ -42,6 +42,17 @@ Co se bude probirat
         https://medium.com/@maneesha.wijesinghe1/what-happens-when-you-type-an-url-in-the-browser-and-press-enter-bb0aa2449c1a
     ISO/OSI
         https://cs.wikipedia.org/wiki/Referen%C4%8Dn%C3%AD_model_ISO/OSI
+    Prehled protokolu
+        https://cs.wikipedia.org/wiki/TCP/IP
+
+Ukazky
+    dns preklad z domeny na ip
+        host example.com
+    ip+http
+        curl -v http://example.com
+
+    tyto prikazy je nozne vyzkouset take na
+        https://ping.eu/
 
 HTTP
     textový komunikační protokol
@@ -60,11 +71,4 @@ HTTP
         Hlavicka
         Telo
 
-Ukazky
-    dns preklad z domeny na ip
-        host example.com
-    ip+http
-        curl -v http://example.com
-
-    tyto prikazy je nozne vyzkouset take na
-        https://ping.eu/
+Zacatek HTML
