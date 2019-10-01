@@ -1,28 +1,26 @@
-Predchozi zadani semestralek
-    tiny.cc/zwa2
+Last years term paters
+    tiny.cc/zwa2018
 
 HTML
-    Doplnit do textu strukturu
-    Doplnit do textu význam
-    Syntaxe html
-        Značka
-        Obsah značky
-        Atribut
+    Adds structure to text
+    Adds semantics/meaning to text
+    Syntax
+        Tag
+        Tag content
+        Attribute
+        Comments
         HTML entity
             a<b
-                proc tam neni b
-            Webovka "Character Entity Reference Chart" na googlu
+                why no "b" is displayed
+            Search "Character Entity Reference Chart" on Google
                 https://dev.w3.org/html5/html-author/charref
                 &lt;
                 &gt;
                 &amp;
                 &apos;
                 &quot;
-                Layout
-        komentare
-            <!-- comment -->
 
-Základní struktůra stránky
+Basic HTML structure
     <!DOCTYPE html>
     <html>
         <head>
@@ -34,24 +32,24 @@ Základní struktůra stránky
         </body>
     </html>
 
-Nadpisy
+Title
     <h1>
     <h6>
 
-Odstavce
+Paragrapg
     <p>
     <br>
 
-Prázdné elementy
+Empty elements
     <div>
     <span>
 
-Další
-    <b> - Bold text
-        defines bold text, without any extra importance
-        Prezentační značka (historická)
+Formatting
     <strong> - Important text
         defines strong text, with added semantic "strong" importance.
+    <b> - Bold text
+        defines bold text, without any extra importance
+        presentation tag, historical, deprecated
     <em> - Emphasized text
     <mark> - Marked text
     <small> - Small text
@@ -61,7 +59,7 @@ Další
     <sup> - Superscript text
     <q> - quotation
 
-short quotation
+Short quotation
     <blockquote>
     <abbr>
 
@@ -71,21 +69,22 @@ Lists
     <ol>
         <li>
 
-Odkaz
+Links
     <a>
     Href
-    Relativní url
-    Absolutní url
+    relative url
+    absolute url
 
 <img>
     src
     width
     height
     alt
-        Když nelze zobrazit obrázek
+        When image cannot be displayed
         Screen readers
+        Google search
 
-Tabulka
+Table
     <table>
         <thead>
             <tr>
@@ -110,30 +109,35 @@ HTML5 Semantic Elements
         Defines main content of a document
     <footer>
 
-Zkratky
+Abbreviations
     <abbr title="World Health Organization">WHO</abbr>
 
-Ukol na procviceni
-    Hlavni nadpis
+Homework
+    Basic HTML structure - <!DOCTYPE HTML>, <body>, <head>, etc
 
-    Nadpis druhe urovne
+    Main page title - "2nd Lecture"
+
+    Second level title - "Text formatting"
         Odstavec s textem a<b
         Odstavec s **tucnym** textem
         Odkaz na www.seznam.cz
 
-    Nadpis druhe urovne - Seznam
-        - prvni polozka seznamu
-        - druha polozka seznamu
-            - zanorena polozka
-            - zanorena polozka
-        - treti polozka seznamu
+    Second level title - "Lists"
+        Create ordered list
+            "First ordered list item"
+            "Second ordered list item"
+                Nested list
+                    "Nested unordered item"
+                    "Another nested unordered item"
+            "Third ordered list item"
 
-    Nadpis druhe urovne - Obrazek
-        obrazek psa
+    Second level title - "Image"
+        Download image of dog/cat from the internet
+        Display that image in your page
 
-    Nadpis druhe urovne - Tabulka
-        -------------------
-        | produkt  | cena |
-        -------------------
-        | CocaCola | 30KC |
-        | Fanta    | 25KC |
+    Second level title - "Table"
+        ----------------------
+        | Product   | Price  |
+        ----------------------
+        | Coca-Cola | 30 CZK |
+        | Pepsi     | 25 CZK |
