@@ -1,80 +1,80 @@
 <!DOCTYPE html>
 <!--
-    <!DOCTYPE html> verze html specifikace co se ma pouzit
-    Metadata dokumentu ve znacce <head>,
-    obsah dokumentu ve znacce <body>
+    <!DOCTYPE html> - HTML version that should be used
+    Document metadata in <head> tag
+    Document content in <body> tag
 -->
-<html lang="cs"><!-- Jazyk dokumentu -->
+<html lang="en"><!-- Document language (en, cs, ...) -->
     <head>
-        <!-- Název dokumentu -->
-        <title>2. cvičení HTML</title>
+        <!-- Document title, browsers display them in tabs -->
+        <title>2nd Lecture</title>
 
-        <!-- Znakova sada dokumentu, dobre uvadet, bez tohoto tagu by se nemusely
-        spravne zobrazovat české znaky. -->
+        <!-- Document character set, without this Czech characters might not be
+             displayed correctly. -->
         <meta charset="utf-8">
     </head>
     <body>
-        <h1>2. cvičení HTML</h1>
+        <h1>2nd Lecture</h1>
 
-        <hr><!-- Oddelujici cara -->
+        <hr><!-- Tag defines a thematic break in an HTML page, e.g. a shift of topic. -->
 
-        <h2>Nadpisy</h2>
-        <h1>Nadpis 1. urovne</h1>
-        <h2>Nadpis 2. urovne</h2>
-        <h3>Nadpis 3. urovne</h3>
-        <h4>Nadpis 4. urovne</h4>
-        <h5>Nadpis 5. urovne</h5>
-        <h6>Nadpis 6. urovne</h6>
+        <h2>Titles</h2>
+        <h1>Title 1st level</h1>
+        <h2>Title 2nd level</h2>
+        <h3>Title 3rd level</h3>
+        <h4>Title 4th level</h4>
+        <h5>Title 5th level</h5>
+        <h6>Title 6th level</h6>
 
-        <h2>Odstavce</h2>
-        <p>Text odstavce</p>
-        <p>Text odstavce</p>
-        <p>Text zalomeny pomoci tagu <br>dalsi text</p>
+        <h2>Paragraphs</h2>
+        <p>Paragraph text</p>
+        <p>Paragraph text</p>
+        <p>Text with line break <br>text after line break</p>
 
-        <h2>Prazdne elementy bez vyznamu</h2>
-        <p>Budou se hodit az zacneme pracovat s CSS</p>
-        <div>Blokovy element bez vyznamu</div>
-        <div>Blokovy element bez vyznamu</div>
-        <div>Blokovy element bez vyznamu</div>
-        <span>Radkovy element bez vyznamu</span>
-        <span>Radkovy element bez vyznamu</span>
-        <span>Radkovy element bez vyznamu</span>
+        <h2>Empty elements without semantics</h2>
+        <!-- This will be useful when we start working with CSS -->
+        <div>Block element without semantics</div>
+        <div>Block element without semantics</div>
+        <div>Block element without semantics</div>
+        <span>Line element without semantics</span>
+        <span>Line element without semantics</span>
+        <span>Line element without semantics</span>
 
-        <h2>Seznamy</h2>
+        <h2>Lists</h2>
         <ul>
-            <li>Polozka seznamu</li>
-            <li>Polozka seznamu</li>
-            <li>Polozka seznamu</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
         </ul>
         <ol>
-            <li>Polozka cislovaneho seznamu</li>
-            <li>Polozka cislovaneho seznamu</li>
-            <li>Polozka cislovaneho seznamu</li>
+            <li>Ordered list item</li>
+            <li>Ordered list item</li>
+            <li>Ordered list item</li>
         </ol>
         <ol>
-            <li value="10">Pouziti atributu value</li>
-            <li>Pouziti atributu value</li>
-            <li>Pouziti atributu value</li>
-            <li value="20">Pouziti atributu value</li>
-            <li>Pouziti atributu value</li>
+            <li value="10">attribute value=10</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li value="20">attribute value=20</li>
+            <li>List Item</li>
         </ol>
 
-        <h2>Formatovani textu</h2>
+        <h2>Text formatting</h2>
         <ul>
-            <li><strong>znacka strong</strong></li>
-            <li><em>znacka em</em></li>
-            <li><mark>znacka mark</mark></li>
-            <li><small>znacka small</small></li>
-            <li><del>znacka del</del></li>
-            <li><ins>znacka ins</ins></li>
-            <li>znacka sup a sub: log<sub>2</sub>16 &times; 2<sup>2</sup></li>
-            <li><q>znacka q pro citace</q></li>
+            <li><strong>strong tag</strong></li>
+            <li><em>em tag</em></li>
+            <li><mark>mark tag</mark></li>
+            <li><small>small tag</small></li>
+            <li><del>del tag</del></li>
+            <li><ins>ins tag</ins></li>
+            <li>sup and sub tag: log<sub>2</sub>16 &times; 2<sup>2</sup></li>
+            <li><q>q tag for quotations</q></li>
         </ul>
 
-        <h2>Odkazy</h2>
-        <p>Text s <a href="https://example.com">normalnim odkazem</a> a s <a href="https://example.com" target="_blank">odkazem co se otevira do nove zalozky</a>.</p>
+        <h2>Links</h2>
+        <p>Text with <a href="https://example.com">regular link</a> and with <a href="https://example.com" target="_blank">link that opens to another window</a>.</p>
 
-        <h2>Obrazky</h2>
+        <h2>Images</h2>
         <img
             src="img/dog.jpg"
             width="500"
@@ -82,50 +82,49 @@
             alt="Pes"
         >
 
-        <h2>Tabulky</h2>
+        <h2>Table</h2>
         <table>
             <thead>
                 <tr>
-                    <th>bunka nadpisoveho radku</th>
-                    <th>bunka nadpisoveho radku</th>
-                    <th>bunka nadpisoveho radku</th>
+                    <th>header cell</th>
+                    <th>header cell</th>
+                    <th>header cell</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>bunka tabulky a</td>
-                    <td>bunka tabulky aaaaaaaaa</td>
-                    <td>bunka tabulky aaaaaaaaaaaaaaaaaaaaa</td>
+                    <td>table cell a</td>
+                    <td>table cell aaaaaaaaa</td>
+                    <td>table cell aaaaaaaaaaaaaaaaaaaaa</td>
                 </tr>
                 <tr>
-                    <td>bunka tabulky</td>
-                    <td colspan="2">bunka tabulky na 2 sloupce pomoci colspan atributu</td>
+                    <td>table cell</td>
+                    <td colspan="2">table cell colspan=2</td>
                 </tr>
                 <tr>
-                    <td>bunka tabulky aaaaaaaaaaaaaaaaaaaaa</td>
-                    <td rowspan="2">bunka tabulky na 2 radky pomoco rowspan atributu</td>
-                    <td>bunka tabulky aaaaaaaaa</td>
+                    <td>table cell aaaaaaaaaaaaaaaaaaaaa</td>
+                    <td rowspan="2">table cell rowspan=2</td>
+                    <td>table cell aaaaaaaaa</td>
                 </tr>
                 <tr>
-                    <td>bunka tabulky aaaaaaaaaaaaaaaaaaaaa</td>
-                    <td>bunka tabulky aaaaaaaaa</td>
+                    <td>table cell aaaaaaaaaaaaaaaaaaaaa</td>
+                    <td>table cell aaaaaaaaa</td>
                 </tr>
             </tbody>
         </table>
 
-        <h2>Zkratky</h2>
-        <p>Pomoci znacky abbr vyjadrime ze dany kus textu je zkratka, muzeme pridat atribut title kde dame cely nazev. Prikad zkratky: <abbr title="World Health Organization">WHO</abbr>.
-        </p>
+        <h2>Abbreviations</h2>
+        <p>Abbreviation tag with title attribute: <abbr title="World Health Organization">WHO</abbr>.</p>
 
-        <h2>HTML entity</h2>
+        <h2>HTML entities</h2>
         <p>
-            V HTML jsou znaky se specialnim vyznamen, napr vetsitko (&gt;), kdyz chceme zapsat text ve kterem tento znak vetsitka a tak ho musime zapsat pomoci html entit.
+            In HTML there are characters with special meaning, e.g. (&gt;), when we want to display just text of this character, we need to use HTML entities.
             <br>
-            Prikal pouziti entity: 5 &gt; 2.
+            Example of usage: 5 &gt; 2.
         </p>
-        <a href="https://dev.w3.org/html5/html-author/charref">Prehled HTML entit</a>
+        <a href="https://dev.w3.org/html5/html-author/charref">Link to list of HTML entities</a>
 
-        <h2>HTML5 semanticke elementy</h2>
+        <h2>HTML5 semantic elements</h2>
         <img
             src="img/semantic-elements.gif"
             width="219"
@@ -133,13 +132,6 @@
             alt="HTML5 semanticke elementy"
         >
         <br>
-        <a href="https://www.w3schools.com/html/html5_semantic_elements.asp">Odkaz na prehled novych elementu</a>
-
-        <h2>Odkazy</h2>
-        <ul>
-            <li><a href="https://tiny.cc/zwa2">Zadání semestrálek z minulých let</a></li>
-            <li><a href="https://dev.w3.org/html5/html-author/charref">Prehled HTML entit</a></li>
-            <li><a href="https://www.w3schools.com/html/html5_semantic_elements.asp">Odkaz na prehled novych elementu</a></li>
-        </ul>
+        <a href="https://www.w3schools.com/html/html5_semantic_elements.asp">Link to list of semantic elements</a>
     </body>
 </html>
