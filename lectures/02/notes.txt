@@ -1,5 +1,6 @@
 Last years term paters
     tiny.cc/zwa2018
+    https://docs.google.com/spreadsheets/d/152VNhpxWYW8ddAfO0G7xnS6ja4sKJ-4NKS-e37FG0n8/edit?usp=sharing
 
 HTML
     Adds structure to text
