@@ -15,16 +15,23 @@
             action="https://wa.toad.cz/~hurtapet/form.php"
             method="POST"
         >
+            <!-- Fieldset can be used to group related form items together,
+                 also section could be used as an alternative. -->
             <fieldset>
                 <legend>Basic account information</legend>
+
                 <div>
                     <label>
                         Email <abbr title="required">*</abbr>
+                        <!-- Choosing the correct input type is important for accessibility (eg.: different keyboard on phones).
+                             Also it will provide different validation rules when you add required attribute. -->
                         <input type="email" name="email" required>
                     </label>
                 </div>
 
                 <div>
+                    <!-- Label connects text/elements with input element. If element is connected
+                        to some input, clicking on the element will change focus on the input. -->
                     <label>
                         Password <abbr title="required">*</abbr>
                         <input type="password" name="password" required>
@@ -64,20 +71,28 @@
                 <div>
                     Hobbies
                     <label>
-                        <input type="checkbox" name="newsletter[]" value="travelling">
+                        <!-- name="array[]" is how you do array structures with form -->
+                        <input type="checkbox" name="hobbies[]" value="travelling">
                         Travelling
                     </label>
                     <label>
-                        <input type="checkbox" name="newsletter[]" value="sports">
+                        <input type="checkbox" name="hobbies[]" value="sports">
                         Sports
                     </label>
                     <label>
-                        <input type="checkbox" name="newsletter[]" value="cars">
+                        <input type="checkbox" name="hobbies[]" value="cars">
                         Cars
                     </label>
                     <label>
-                        <input type="checkbox" name="newsletter[]" value="sports">
+                        <input type="checkbox" name="hobbies[]" value="sports">
                         Sports
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <div>Something about you</div>
+                        <textarea name="about" cols="30" rows="10"></textarea>
                     </label>
                 </div>
             </fieldset>
@@ -90,9 +105,10 @@
             </div>
 
             <button type="reset">Reset</button>
+
+            <!-- Every form needs to have submit button -->
             <button type="submit">Submit</button>
         </form>
-
 
     </body>
 </html>
