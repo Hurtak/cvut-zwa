@@ -112,33 +112,3 @@ HTML5 Semantic Elements
 
 Abbreviations
     <abbr title="World Health Organization">WHO</abbr>
-
-Homework
-    Basic HTML structure - <!DOCTYPE HTML>, <body>, <head>, etc
-
-    Main page title - "2nd Lecture"
-
-    Second level title - "Text formatting"
-        Odstavec s textem a<b
-        Odstavec s **tucnym** textem
-        Odkaz na www.seznam.cz
-
-    Second level title - "Lists"
-        Create ordered list
-            "First ordered list item"
-            "Second ordered list item"
-                Nested list
-                    "Nested unordered item"
-                    "Another nested unordered item"
-            "Third ordered list item"
-
-    Second level title - "Image"
-        Download image of dog/cat from the internet
-        Display that image in your page
-
-    Second level title - "Table"
-        ----------------------
-        | Product   | Price  |
-        ----------------------
-        | Coca-Cola | 30 CZK |
-        | Pepsi     | 25 CZK |
