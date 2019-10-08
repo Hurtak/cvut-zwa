@@ -1,4 +1,4 @@
-Formulare
+Forms
     form
         method
         action
@@ -9,17 +9,17 @@ Formulare
     button type=submit
 
     label
-        zminit pristupnost
+        mention accessibility
 
     input
         password
         number
         email
 
-    pristupnost
+    accessibility
         http://mobileinputtypes.com/
 
-    validace
+    validation
         required
         text
             maxlength
@@ -29,13 +29,13 @@ Formulare
             max
 
     radio
-        name & value attributy
+        name & value attributes
         checked
     checkbox
-        vicero dat dat pres atribut name="nazevpole[]"
+        multiple data with name="arrayname[]"
     select
         option
-        miultiple atribut
+        multiple attribute
 
     button
         type submit
@@ -47,17 +47,5 @@ Formulare
 HTML validator
     https://validator.w3.org/
 
-HTML Formulare prehled
+HTML Forms tutorial
     https://www.w3schools.com/html/html_forms.asp
-
-Ukol
-    url: https://wa.toad.cz/~hurtapet/form.php
-
-    Registracni formular
-        email
-        heslo
-        telefon
-        pohlavi
-        souhlas se zasilanim novinek na email
-
-    nezapomente na validaci polozek pomoci atributu typu required

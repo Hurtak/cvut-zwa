@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Task Solution</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Task solution</h1>
+
+        <h2>Registration form</h2>
+
+        <p>Fields marked with <abbr title="required">*</abbr> are required</p>
+
+        <form
+            action="https://wa.toad.cz/~hurtapet/form.php"
+            method="POST"
+        >
+            <fieldset>
+                <legend>Basic account information</legend>
+                <div>
+                    <label>
+                        Email <abbr title="required">*</abbr>
+                        <input type="email" name="email" required>
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        Password <abbr title="required">*</abbr>
+                        <input type="password" name="password" required>
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        Password again <abbr title="required">*</abbr>
+                        <input type="password" name="password-again" required>
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        Phone
+                        <input type="tel" name="phone">
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Something about you</legend>
+
+                <div>
+                    Gender
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        Female
+                    </label>
+                </div>
+
+                <div>
+                    Hobbies
+                    <label>
+                        <input type="checkbox" name="newsletter[]" value="travelling">
+                        Travelling
+                    </label>
+                    <label>
+                        <input type="checkbox" name="newsletter[]" value="sports">
+                        Sports
+                    </label>
+                    <label>
+                        <input type="checkbox" name="newsletter[]" value="cars">
+                        Cars
+                    </label>
+                    <label>
+                        <input type="checkbox" name="newsletter[]" value="sports">
+                        Sports
+                    </label>
+                </div>
+            </fieldset>
+
+            <div>
+                <label>
+                    <input type="checkbox" name="terms">
+                    I agree with the terms and conditions
+                </label>
+            </div>
+
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+
+
+    </body>
+</html>
