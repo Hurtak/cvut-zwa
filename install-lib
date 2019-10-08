@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-cd "$(dirname "$0")"
-
-cd lib
-wget "https://raw.githubusercontent.com/oxalorg/sakura/master/css/sakura.css"
