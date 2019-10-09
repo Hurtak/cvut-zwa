@@ -1,23 +1,47 @@
 Forms
     form
-        method
-        action
-            url: https://wa.toad.cz/~hurtapet/form.php
+
     input
         text
 
     button type=submit
 
+    form-action
+        url: https://wa.toad.cz/~hurtapet/form.php
+
+    input attributes
+        name
+        value
+
+    form attributes
+        method
+        action
+
     label
         mention accessibility
+        http://mobileinputtypes.com/
 
     input
         password
         number
         email
 
-    accessibility
-        http://mobileinputtypes.com/
+    radio
+        name & value attributes
+        checked
+
+    checkbox
+        multiple data with name="arrayname[]"
+
+    select
+        option
+        multiple attribute
+
+    textarea
+
+    button
+        type submit
+        type reset
 
     validation
         required
@@ -27,19 +51,6 @@ Forms
             step
             min
             max
-
-    radio
-        name & value attributes
-        checked
-    checkbox
-        multiple data with name="arrayname[]"
-    select
-        option
-        multiple attribute
-
-    button
-        type submit
-        type reset
 
     fieldset
         legend
