@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>4. cvičení</title>
         <meta charset="utf-8">
+        <title>4th lecture</title>
 
-        <!-- Odkaz na externí css. -->
+        <!-- Link to external CSS file -->
         <link rel="stylesheet" type="text/css" href="lecture.css">
     </head>
     <body>
-        <h1>4. cvičení CSS</h1>
+        <h1>4th lecture</h1>
 
-        <h2>Ukázky principů CSS</h2>
+        <h2>CSS</h2>
         <ul>
             <li><a href="http://www.w3schools.com/css/css_intro.asp">http://www.w3schools.com/css/css_intro.asp</a></li>
             <li><a href="http://www.csszengarden.com">http://www.csszengarden.com</a></li>
         </ul>
 
-        <h2>Selektory</h2>
+        <h2>Selectors</h2>
+        <style>
+                /* Use <style> tag and style attribute only on special occasions, most
+                   of the time it is better to have your CSS in separate file that is
+                   linked with <link> tag in <head>.
+                   Here we use <style> only to have HTML and CSS example code placed
+                   together.
+                 */
+
+                /* One element selector */
+                .one { background-color: red; }
+
+                /* Selectors grouping */
+                .two, .three  { background-color: orange; }
+
+                /* Combinator selector, find .four-nested somewhere inside of .four */
+                .four .four-nested  { background-color: lightblue; }
+        </style>
         <ul class="selectors">
             <li class="one">text text</li>
             <li>text text</li>
@@ -32,23 +49,6 @@
             </li>
             <li>text text</li>
         </ul>
-        <style>
-            /* Takovyto zapis stylu kdyz jsou promo v HTML pouzivejte jenom
-               vyjimecne. Ve vetsine pripadu je nejlepsi pouzit odkaz na
-               externi CSS soubor pres <link> znacku v hlavicce.
-               Zde pouzivame <style> znacku jenom z duvodu prehlednosti pro
-               dane priklady.
-             */
-
-            /* Jeden element */
-            .one { background-color: red; }
-
-            /* Dva elementy */
-            .two, .three  { background-color: orange; }
-
-            /* Zanořené elementy */
-            .four .four-nested  { background-color: lightblue; }
-        </style>
 
         <h2>Barvy</h2>
         <ul>
@@ -75,7 +75,7 @@
             <li style="text-decoration: none">text-decoration: none</li>
             <li style="text-decoration: overline">text-decoration: overline</li>
             <li style="text-decoration: underline">text-decoration: underline</li>
-            <li style="text-decoration: line-throught">text-decoration: underline</li>
+            <li style="text-decoration: line-through">text-decoration: line-through</li>
         </ul>
 
         <ul>
@@ -105,13 +105,13 @@
             <li style="font-weight: bold">font-weight: bold</li>
         </ul>
 
-        <h2>Seznamy</h2>
+        <h2>Lists</h2>
         <ul>
             <li>text text</li>
             <li style="list-style-type: circle">list-style-type: circle</li>
         </ul>
 
-        <h2>Skrývání elementu</h2>
+        <h2>Elements hiding</h2>
         <ul>
             <li>text před display:none</li>
             <li style="display: none">display:none</li>
@@ -121,7 +121,7 @@
             <li>text po visibility:hidden</li>
         </ul>
 
-        <h2>Ráměčky</h2>
+        <h2>Borders</h2>
         <ul>
             <li style="border: 1px solid red">border: 1px solid red</li>
             <li style="border: 3px dotted blue">border: 3px dotted blue</li>
@@ -129,22 +129,9 @@
         </ul>
 
         <h2>Display</h2>
-        <p class="block">Blokovy element</p>
-        <p class="block block-200">Blokovy element se změněnou velikostí</p>
-        <p class="block">Blokovy element</p>
-        <br>
-        <span class="inline-block">inline-block element</span>
-        <span class="inline-block">inline-block element</span>
-        <span class="inline-block">inline-block element</span>
-        <br>
-        <span class="inline">inline element</span>
-        <span class="inline">inline element</span>
-        <span class="inline">inline element</span>
-
         <style>
             .block {
-                /* Blokový element má rozměr na celou šířku, pokud není
-                   nastaveno jinak. */
+                /* Block element has 100% width, unless we change */
                 display: block;
                 background: orange;
             }
@@ -152,21 +139,31 @@
                 width: 200px;
             }
             .inline-block {
-                /* Hybrid mezi block a inline. Je možné nastavovat rozměry
-                   jako block elementu, ale velikost si standardně bere z
-                   rozměrů svého obsahu. */
+                /* Hybrid between block and inline. You can change size of inline-block,
+                   compared to inline, where you cant, but by default it takes the width
+                   from its content, just like inline element. */
                 display: inline-block;
                 height: 50px;
                 background: lightgreen;
             }
             .inline {
                 display: inline;
-                /* Velikostní hodnoty jsou u inline elementů ignorovány,
-                   rozměry se určují podle velikosti obsahu */
+                /* Dimensions settings are ignored with inline elements */
                 height: 50px;
                 background: lightblue;
             }
         </style>
+        <p class="block">block element</p>
+        <p class="block block-200">block element with changed size</p>
+        <p class="block">block element</p>
+        <br>
+        <span class="inline-block">inline-block element</span>
+        <span class="inline-block">inline-block element</span>
+        <span class="inline-block">inline-block element</span>
+        <br>
+        <span class="inline">inline element</span>
+        <span class="inline">inline element</span>
+        <span class="inline">inline element</span>
 
         <h2>Box model</h2>
         <div class="box">box 200px</div>
