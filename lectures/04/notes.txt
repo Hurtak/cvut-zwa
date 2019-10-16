@@ -2,62 +2,63 @@ CSS
     CSS stands for Cascading Style Sheets
     CSS describes how HTML elements are to be displayed on screen, paper, or in other media
 
-Ukázky - stejné html - různé CSS
+Example - same HTML - different CSS
     http://www.w3schools.com/css/css_intro.asp
     http://www.csszengarden.com
 
-Syntaxe
-    p {color:red; text-align:center;}
-    Css komentáře
-        /* komentar */
-    Selectory
+Syntax
+    Basic syntax
+        p {
+            color: red;
+            text-align: center;
+        }
+    CSS
+        /* comment */
+    Selectors
         Element - article
-        Id - #nazevId
-        Třída - .nazevTridy
-
-    Seskupování selektorů
+        id - #idName
+        class - .className
+    Selectors grouping
         h1, h2, p { color: red; }
-
-    Pokročilé css selektory
-        Selektor potomka
-            article h2 - vsechny nadpisy druhe urovne co se nachazi v tagu article
-
-    Pseudo selektory
-        Prvni odstavec
+    Combinator selectors
+        Descendant selector
+            article h2 - all h2 inside of article
+    Pseudo selectors
+        First paragraph
             p:first-child { color: red; }
-        Po najeti mysi
+        Mouse hover
             p:hover { color: red; }
 
-Vložení css
-    Interní <style>
+Add CSS
+    Style tag
         <style>
             p {
                 color: red;
             }
         </style>
-    Inlinovaný styl
-        <p style="color: red;">odstavec</p>
-    Externí dokument
-        <link rel="stylesheet" type="text/css" href="cesta-ke-souboru.css">
+    Inline style
+        <p style="color: red;">text</p>
+    Link to external document
+        <link rel="stylesheet" type="text/css" href="./link.css">
 
-Kaskádování stylů & specificita selektoru
+CSS cascade and selector specificity
     http://kod.djpw.cz/xuoc
-    TODO: specificita selektoru obrazek
+    https://css-tricks.com/specifics-on-css-specificity/
 
-Ukazky
+Examples
     color: red
     text-align: center
-    Barvy
+    colors
         red
         #000
         #00000
         rgb(0, 0, 0)
         rgba(0, 0, 0, .5)
-    Jednotky
+    units
         px
         em
         %
-    Odsazeni, rozmery
+    spacing, dimensions
         margin
         padding
         border
@@ -66,8 +67,7 @@ Ukazky
     box-model
         box-sizing: content-box
         box-sizing: border-box
-
-    Skladani marginu do sebe
+    Margin collapsing
 
 Display
     Block
@@ -79,11 +79,11 @@ Display
     Inline-block
         inline-block elements are like inline elements but they can have a width and a height.
 
-Skrývání elementů
-    Display: none
-    Visibility: hidden
+Hide element
+    display: none;
+    visibility: hidden;
 
-Pseudo třídy 
+Pseudo classes
     http://www.w3schools.com/css/css_pseudo_classes.asp
     a:visited
     a:hover
