@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Task solution</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .page header {
+            padding: 2em;
+            background: lightblue;
+        }
+
+        .page section nav {
+            box-sizing: border-box;
+            display: inline-block;
+            width: 200px;
+            padding: 2em;
+            vertical-align: top;
+            background: lightsalmon;
+        }
+        .page section main {
+            box-sizing: border-box;
+            display: inline-block;
+            width: calc(100% - 200px);
+            background: lightgreen;
+            padding: 2em;
+        }
+
+        .page footer {
+            padding: 2em;
+            background: lightcoral;
+        }
+
+        /*
+            Phone/Mobile styles for screen width <= 700px
+            - Switch from column layout (main menu | content) to row layout
+        */
+        @media (max-width: 700px) {
+            .page section nav {
+                width: 100%;
+            }
+            .page section main {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <!--
+                - 100% width
+            -->
+            Header
+        </header>
+        <section>
+            <nav>
+                <!--
+                    - 2em padding
+                    - width 200px
+                -->
+                Main menu
+            </nav><!--
+                Special comment to not have space between nav and main, since spaces between texts/elements also have
+                dimensions in HTML (by default, or when you set display to block, inline, inline-block)
+            --><main>
+                <!--
+                    - 2em padding
+                    - width the rest
+                -->
+                <h1>Page content</h1>
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto animi recusandae consequatur, molestiae veniam ex itaque perspiciatis, harum fugit eligendi natus laborum id tempora nulla magni quasi hic. Placeat, aliquid.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto animi recusandae consequatur, molestiae veniam ex itaque perspiciatis, harum fugit eligendi natus laborum id tempora nulla magni quasi hic. Placeat, aliquid.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto animi recusandae consequatur, molestiae veniam ex itaque perspiciatis, harum fugit eligendi natus laborum id tempora nulla magni quasi hic. Placeat, aliquid.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto animi recusandae consequatur, molestiae veniam ex itaque perspiciatis, harum fugit eligendi natus laborum id tempora nulla magni quasi hic. Placeat, aliquid.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto animi recusandae consequatur, molestiae veniam ex itaque perspiciatis, harum fugit eligendi natus laborum id tempora nulla magni quasi hic. Placeat, aliquid.</p>
+            </main>
+        </section>
+        <footer>
+            <!--
+                - 100% width
+                - 200px height
+                - 2em padding
+            -->
+            Footer
+        </footer>
+    </div>
+
+</body>
+</html>
