@@ -12,12 +12,8 @@
 
 ## TODO
 
--   04
-    -   sekce velikostni jednotky
-    -   lepsi priklad u em + rem
-    -   border-radius
-    -   pseudo selektory
--   05
-    -   media queries
-    -   pseudo elementy
-    -   flex
+- 05
+    - move display from 04
+    - calc example
+    - space between inline-block elements example
+    - link to flexbox
