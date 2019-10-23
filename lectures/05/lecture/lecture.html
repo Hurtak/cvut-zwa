@@ -3,9 +3,64 @@
     <head>
         <meta charset="utf-8">
         <title>5th lecture</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <!--
+            Using the viewport meta tag to control layout on mobile browsers, this
+            is usually a good default.
+        -->
     </head>
     <body>
         <h1>5th lecture</h1>
+
+        <h2>Display</h2>
+        <style>
+            .block {
+                /* Block element has 100% width, unless we change */
+                display: block;
+                background: orange;
+            }
+            .block-200 {
+                width: 200px;
+            }
+            .inline-block {
+                /*
+                    Hybrid between block and inline. You can change size of inline-block,
+                    compared to inline, where you cant, but by default it takes the width
+                    from its content, just like inline element.
+                */
+                display: inline-block;
+                height: 50px;
+                background: lightgreen;
+            }
+            .inline {
+                display: inline;
+                /* Dimensions settings are ignored with inline elements */
+                height: 50px;
+                background: lightblue;
+            }
+        </style>
+        <p class="block">block element</p>
+        <p class="block block-200">block element with changed size</p>
+        <p class="block block-200">block element with changed size</p>
+        <p class="block">block element</p>
+        <br>
+        <span class="inline-block">inline-block element</span>
+        <span class="inline-block">inline-block element</span>
+        <span class="inline-block">inline-block element</span>
+        <!--
+            Notice that inline and inline-block elements have space between them.
+            They are caused literally by the "space" character that is present between
+            the tags, and just like any other text character, it has dimensions
+            from its font-size.
+            This is standard behavior with classic text/document display types,
+            later on, when you will use layout display types, like flex or grid,
+            they will not have this behavior.
+        -->
+        <br>
+        <span class="inline">inline element</span>
+        <span class="inline">inline element</span>
+        <span class="inline">inline element</span>
 
         <h2>Position</h2>
         <div class="box-big">
@@ -83,5 +138,47 @@
             }
         </style>
 
+        <h2>Calc</h2>
+        <div class="calc-example">
+            width: calc(100% - 200px);
+        </div>
+        <style>
+            .calc-example {
+                width: calc(100% - 200px);
+                height: 100px;
+                background: lightgreen;
+            }
+        </style>
+
+        <h2>Media queries</h2>
+        <div class="media-max-width">
+            this box has different styles when viewport width is < 600px
+        </div>
+        <style>
+            .media-max-width {
+                background: lightgreen;
+                height: 100px;
+            }
+
+            @media (max-width: 600px) {
+                .media-max-width {
+                    background: lightblue;
+                }
+            }
+        </style>
+
+        <h2>Pseudo elements</h2>
+        <ul class="pseudo-before">
+            <li>item with ::before</li>
+            <li>item with ::before</li>
+            <li>item with ::before</li>
+        </ul>
+        <style>
+            .pseudo-before li::before {
+                content: "xxx";
+                background: lightblue;
+                margin-right: 1em;
+            }
+        </style>
     </body>
 </html>

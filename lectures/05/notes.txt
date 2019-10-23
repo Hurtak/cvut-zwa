@@ -1,3 +1,13 @@
+Display
+    Block
+        always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
+        Div, h1-h6, p, form, header, footer, section
+    Inline
+        An inline element does not start on a new line and only takes up as much width as necessary.
+        Span, a, img
+    Inline-block
+        inline-block elements are like inline elements but they can have a width and a height.
+
 Position
     Static
         HTML elements are positioned static by default.
@@ -17,6 +27,10 @@ Float
     Used to be used to layouts
     The float CSS property specifies that an element should be taken from the normal flow and placed along the left or right side of its container.
     clear: both
+
+calc
+    calc(100px + 100px);
+    calc(50% - 100px);
 
 Media queries
     2 ways to make mobile web
@@ -56,6 +70,7 @@ Media queries
 
 Meta viewport tag
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag
 
 Pseudo elements
     ::after
@@ -63,6 +78,3 @@ Pseudo elements
     ::first-letter
     ::first-line
     ::selection
-
-Flexbox?
-    https://css-tricks.com/snippets/css/a-guide-to-flexbox/
