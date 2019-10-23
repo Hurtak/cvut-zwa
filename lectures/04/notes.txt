@@ -69,16 +69,6 @@ Examples
         box-sizing: border-box
     Margin collapsing
 
-Display
-    Block
-        always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
-        Div, h1-h6, p, form, header, footer, section
-    Inline
-        An inline element does not start on a new line and only takes up as much width as necessary.
-        Span, a, img
-    Inline-block
-        inline-block elements are like inline elements but they can have a width and a height.
-
 Hide element
     display: none;
     visibility: hidden;

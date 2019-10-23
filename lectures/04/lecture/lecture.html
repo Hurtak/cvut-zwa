@@ -129,45 +129,6 @@
             <li style="border: 5px dashed orange">border: 5px dotted orange</li>
         </ul>
 
-        <h2>Display</h2>
-        <style>
-            .block {
-                /* Block element has 100% width, unless we change */
-                display: block;
-                background: orange;
-            }
-            .block-200 {
-                width: 200px;
-            }
-            .inline-block {
-                /*
-                    Hybrid between block and inline. You can change size of inline-block,
-                    compared to inline, where you cant, but by default it takes the width
-                    from its content, just like inline element.
-                */
-                display: inline-block;
-                height: 50px;
-                background: lightgreen;
-            }
-            .inline {
-                display: inline;
-                /* Dimensions settings are ignored with inline elements */
-                height: 50px;
-                background: lightblue;
-            }
-        </style>
-        <p class="block">block element</p>
-        <p class="block block-200">block element with changed size</p>
-        <p class="block">block element</p>
-        <br>
-        <span class="inline-block">inline-block element</span>
-        <span class="inline-block">inline-block element</span>
-        <span class="inline-block">inline-block element</span>
-        <br>
-        <span class="inline">inline element</span>
-        <span class="inline">inline element</span>
-        <span class="inline">inline element</span>
-
         <h2>Box model</h2>
         <div class="box">box 200px</div>
         <div class="box border-box">box 200px s box-sizing: border-box;</div>
