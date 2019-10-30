@@ -7,11 +7,6 @@ Javascript
 browser console
     f12 -> console tab
 
-add javascript to page
-    script tag inline
-    external file
-    javascript is added/evaluated to the page at the exact place where script tag is added
-
 variable definitions
 
 basic data types
@@ -30,11 +25,6 @@ functions
 
 dynamic typing
 
-window
-document
-console.log
-alert
-
 APIs
     acces to the page
     network
@@ -42,12 +32,19 @@ APIs
     save data locally into the browser
     limited access to file system
 
+window
+document
+console.log
+alert
+
+add javascript to page
+    script tag inline
+    external file
+    javascript is added/evaluated to the page at the exact place where script tag is added
+
 DOM
     Document Object Model
-    API pro práci se stránkou, resp. stromem HTML uzl ů
-
-    Možnost programově měnit cokoliv uživatel vid í
-    Kontrola formul ářů
+    API to work with document, change it, add to it
 
     var obrazek = document.querySelector("p > img");
     var druhyOdkaz = document.querySelectorAll("a")[1];
