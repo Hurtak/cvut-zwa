@@ -1,90 +1,62 @@
-- zakladni datove typy
-- pripojeni javascriptu
-    - script tag inline
-    - externi soubor
-    - posloupnost nacteni
-
-
----
-
-Ukázka testu
-    K čemu slouží HTML značka <ul> ?
-    Výjmenujte které nejdůležitější atributy se nastavují u HTML elementu <form> a popiště k čemu jsou.
-    Jaké znáte délkové/velikostní jednotky v CSS a co znamenají? Výjmenujte alespoň tři.
-
 Javascript
-Logika a interakce v r ámci webové stránky
-Něco se děje bez změny str ánky
-Mapy, chat, hry, aplikace, …
-F12 → Console → zkoušet!
-2 + 2
-• Jak zapojit do stránky
-    ○ Inline
-        • anclick="alert(1)"
-    ○ Script tag
-        ○ Externí script
+    change and interact with document/webpage
+    maps, chat, games, applications
+    search.seznam.cz
+    mapy.cz
 
-• Proměnné
-• Datové typy
-○ Bool
-○ String
-○ Number
-○ Null
-○ Undefined
-○ Array
-○ Objekt
-• Funkce
-function add(a, b) { 
-    return a+b; 
-}
-• If
-○ Dynamic typing: proměnn á mění typ dle potřeby
-• Console
-○ Console.log
-• Alert
-• Confirm
-Složitější datové typy: pole, "objekt", funkce
-Předávány odkazem
-Striktně vzato je všechno objekt; "objekt" je množina dvojic kl íč­hodnota
-if (a && b) { ... }
-for (var i=0; i<pole.length; i++) { ... }
+browser console
+    f12 -> console tab
 
+add javascript to page
+    script tag inline
+    external file
+    javascript is added/evaluated to the page at the exact place where script tag is added
 
-API poskytovan á prohlížečem
-Přístup k vykreslen é stránce
-Síťová komunikace
-Periferie: repro/mikrofon, OpenGL, senzory (mobil), GPS
-Lokální ukládání dat
-Omezená práce se souborov ým systémem
+variable definitions
+
+basic data types
+    boolean
+    null
+    undefined
+    number
+    string
+    array
+    object
+
+functions
+    function add(a, b) { 
+        return a+b; 
+    }
+
+dynamic typing
+
+window
+document
+console.log
+alert
+
+APIs
+    acces to the page
+    network
+    reproductorc/microphone, OpenGL, senzory (mobil), GPS
+    save data locally into the browser
+    limited access to file system
+
 DOM
-Document Object Model
-API pro práci se stránkou, resp. stromem HTML uzl ů
-Možnost programově měnit cokoliv uživatel vid í
-Kontrola formul ářů
-Globální proměnné window a document
-DOM: dotazov ání
-var druhyOdkaz = document.querySelectorAll("a")[1];
-var obrazek = document.querySelector("p > img");
-var odstavec = obrazek.parentNode;
-var potomek = odstavec.firstChild;
-alert(odstavec.innerHTML);
-DOM: manipulace
-var odstavec = document.querySelector("p");
-odstavec.innerHTML = "Generov áno <em>skriptem</em>";
-var obrazek = document.createElement("img");
-obrazek.src = "...";
-odstavec.appendChild(obrazek);
-DOM: události
-JavaScript je (na klientu) navržen tak, aby neobsahoval ž ádná blokující volání
-Programování řízené událostmi
-"Až nastane X, vykonej funkci Y"
-DOM: terminologie ud álostí
-Událost je nějakého typu ("click", "mousemove", "load",  …)
-Událost vzniká na nějakém DOM prvku (nap ř. ten, na které m bylo kliknuto)
-Pro událost je možno definovat několik posluchačů = funkcí
-DOM: události v kostce
-var p = document.querySelector("p");
-var posluchac = function() {
-    alert("kliknuto");
-}
-Elelemt.addEventListener('click')
+    Document Object Model
+    API pro práci se stránkou, resp. stromem HTML uzl ů
+
+    Možnost programově měnit cokoliv uživatel vid í
+    Kontrola formul ářů
+
+    var obrazek = document.querySelector("p > img");
+    var druhyOdkaz = document.querySelectorAll("a")[1];
+    var odstavec = obrazek.parentNode;
+    var potomek = odstavec.firstChild;
+    document.createElement
+    document.attributeName = 'attributeValue';
+
+    innerHTML
+    innerText
+
+    addEventListener

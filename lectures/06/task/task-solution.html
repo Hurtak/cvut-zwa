@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Task solution</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+
+        <!--
+            1. Listen on form submit event with addEventListener
+            2. Call preventDefault method to prevent form from submitting
+            3. Log event object into the console with console.log
+            4. Write form validation function that validates
+                - Email is filled
+                - Passwords are filled
+                - Passwords are the same
+            5. If form is invalid
+                - Display message in the error box
+                - Focus invalid input element
+            6. If form is valid
+                - Hide the error message
+                - Let the form submit by not calling the preventDefault method
+        -->
+    </head>
+    <body>
+        <form
+            method="POST"
+            action="https://wa.toad.cz/~hurtapet/form.php"
+            class="form"
+            id="form"
+            novalidate
+        >
+            <h2 class="form-title">Register</h2>
+
+            <label class="form-item">
+                <span class="form-item-text">Email</span>
+                <input
+                    class="form-item-input"
+                    id="email"
+                    name="email"
+                    type="email"
+                    autofocus
+                >
+            </label>
+
+            <label class="form-item">
+                <span class="form-item-text">Password</span>
+                <input
+                    class="form-item-input"
+                    id="password"
+                    name="password"
+                    type="password"
+                >
+            </label>
+
+            <label class="form-item">
+                <span class="form-item-text">Password again</span>
+                <input
+                    class="form-item-input"
+                    id="password-again"
+                    name="password-again"
+                    type="password"
+                >
+            </label>
+
+            <button class="form-submit" type="submit" id="submit">Submit</button>
+
+            <div class="error" id="error" hidden>
+            </div>
+        </form>
+
+        <script src="scripts.js"></script>
+    </body>
+</html>
