@@ -9,3 +9,9 @@
 -   It is just static hand coded html
 -   There is [Sakura](https://github.com/oxalorg/sakura) CSS library used
     -   Downloaded to `lib/sakura.css`
+
+## TODO
+
+- 6
+    - remove hidden attribute, use classList
+    - simplify example drastically

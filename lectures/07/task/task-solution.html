@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Task solution</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Star Wars</h1>
+        <input type="text" id="search">
+        <ul id="star-wars"></ul>
+        <div id="message-box"></div>
+
+        <script>
+            /*
+                1. Use XMLHttpRequest to create HTTP request and get data from StarWarsApi
+                    url: https://swapi.co/api/people/
+                    api: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+                2. Parse StarWars data
+                    JSON.parse
+                    JSON.stringify
+                3. Render data into the DOM
+                    api: https://www.hongkiat.com/blog/dom-manipulation-javascript-methods/
+                    api examples:
+                        elements manipulation
+                            document.createElement()
+                            document.createTextNode()
+                            el.appendChild(el)
+
+                            el.innerText
+                            el.innerHTML
+
+                            el.remove()
+                            el.removeChild(childEl)
+                        elements traversal
+                            el.children
+                            el.firstChild
+                            el.firstElementChild
+
+                            el.parentNode
+                            el.parentElement
+                4. Add input, when input changes, make request and render to DOM
+                    new url: https://swapi.co/api/people/?search=INPUTVALUE
+                    api: https://developer.mozilla.org/en-US/docs/Web/API/URL
+                    api examples:
+                        url = new URL('https://seznam.cz')
+                        url.searchParams.set('key', 'value')
+                        url.toString()
+                5. When input changes, cancel previous requests
+                    event is called "input"
+                6. Show loading/error/no results messages for these states
+            */
+
+            var searchEl = document.querySelector("#search");
+            renderMessage("Type something");
+
+            var previousRequest;
+            searchEl.addEventListener("input", function(event) {
+                if (previousRequest) {
+                    previousRequest.abort();
+                }
+
+                renderStarWarsData([]);
+                renderMessage("Loading...");
+
+                var request = new XMLHttpRequest();
+                request.addEventListener("load", function(event) {
+                    if (event.target.status !== 200) {
+                        console.error(event);
+                        renderMessage("Error");
+                        return;
+                    }
+
+                    var data = event.target.responseText;
+                    var dataJson = JSON.parse(data);
+
+                    var people = dataJson.results;
+                    if (people && people.length > 0) {
+                        renderStarWarsData(people);
+                        renderMessage("");
+                    } else {
+                        renderMessage("No results");
+                    }
+                });
+                request.addEventListener("error", function(error) {
+                    console.error(error);
+                    renderMessage("Error");
+                });
+                request.open("GET", "https://swapi.co/api/people/?search=" + encodeURIComponent(searchEl.value));
+                request.send();
+
+                previousRequest = request;
+            })
+
+            function renderStarWarsData(data) {
+                var starWarsEl = document.querySelector("#star-wars");
+                starWarsEl.innerHTML = "";
+
+                for (let i = 0; i < data.length; i++) {
+                    var item = data[i];
+                    var li = document.createElement("li");
+                    li.appendChild(document.createTextNode(item.name));
+                    starWarsEl.appendChild(li);
+                }
+            }
+
+            function renderMessage(message) {
+                var messageEl = document.querySelector("#message-box");
+                messageEl.innerText = message;
+            }
+        </script>
+    </body>
+</html>
