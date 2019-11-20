@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>8. cvičení</title>
+        <title>Task solution</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1>8. cvičení</h1>
+        <h1>PHP</h1>
+
+        <p>
+            Do tasks from
+            <a href="https://cw.fel.cvut.cz/wiki/courses/b6b39zwa/tutorials/08/start">https://cw.fel.cvut.cz/wiki/courses/b6b39zwa/tutorials/08/start</a>
+        </p>
 
         <?php
             // phpinfo();
         ?>
 
-        <p>
-            Ukoly z
-            <a href="https://cw.fel.cvut.cz/wiki/courses/b6b39zwa/tutorials/06/start">https://cw.fel.cvut.cz/wiki/courses/b6b39zwa/tutorials/06/start</a>
-        </p>
-
-        <h2>1) Výpis aktuálního data</h2>
+        <h2>1) Print current date</h2>
         <?php
             echo date("d. m. Y");
         ?>
 
-        <h2>2) Práce s datem</h2>
+        <h2>2) Work with dates</h2>
         <?php
             $datum = "30.11.2016";
             $timestamp = strtotime($datum);
@@ -38,7 +39,7 @@
             echo $daysDictionary[$day];
         ?>
 
-        <h2>3) Funkce &amp; 4) Průchod pole</h2>
+        <h2>3) Functions &amp; 4) Array iteration</h2>
         <?php
             function dateToDay($date) {
                 $timestamp = strtotime($date);
@@ -63,9 +64,8 @@
             }
         ?>
 
-        <h2>5) Vytváření pole</h2>
+        <h2>5) Arrays manipulation</h2>
         <?php
-
             function datesToMonthNumbers($dates) {
                 $monthNumbers = [];
                 foreach ($dates as $key => $date) {
@@ -80,7 +80,7 @@
             print_r($monthNumbers);
         ?>
 
-        <h2>6) Unikátní měsíce</h2>
+        <h2>6) Unique months</h2>
         <?php
             function getUniqueMonthNumbers($dates) {
                 $monthNumbers = [];

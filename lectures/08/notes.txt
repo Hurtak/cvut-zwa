@@ -18,10 +18,15 @@ login to wa.toad.cz
     image url parts
         http://big.info/2017/04/difference-uri-url-urn.html
 
-
 http://php.net/manual/en/index.php
 
 First PHP example
     <?php
-        echo "Ahoj";
+        echo "Hello";
     ?>
+
+Run PHP locally
+    Windows
+        http://www.wampserver.com/en/
+    Mac
+        http://ampps.com/mamp
