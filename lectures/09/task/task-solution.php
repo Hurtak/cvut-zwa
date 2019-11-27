@@ -1,6 +1,6 @@
 <?php
 
-// Vypise escapovanou hodnotu do stranky
+// Writes HTML escaped value into the page
 function escape($value) {
     echo htmlspecialchars($value, ENT_QUOTES);
 }
@@ -10,7 +10,7 @@ $nameValid = false;
 $passValid = false;
 $passSame = false;
 if ($formSend) {
-    // Kontrola hodnot
+    // Validate form data
     $nameValid = isset($_POST["name"]) && strlen($_POST["name"]) >= 2;
     $passValid = isset($_POST["password"]) && strlen($_POST["password"]) >= 5;
     $passSame = isset($_POST["password"]) && isset($_POST["passwordAgain"]) && $_POST["password"] === $_POST["passwordAgain"];
@@ -18,7 +18,7 @@ if ($formSend) {
     $formValid = $nameValid && $passValid && $passSame;
 
     if ($formValid) {
-        die("Formulář je validní.");
+        die("Form is valid.");
     }
 }
 
@@ -27,7 +27,7 @@ if ($formSend) {
 <html>
     <head>
         <meta charset="utf-8">
-        <title>9. cvičení</title>
+        <title>Task solution</title>
         <style>
             .formerror {
                 display: inline-block;
@@ -39,7 +39,7 @@ if ($formSend) {
         </style>
     </head>
     <body>
-        <h1>Registrační formulář</h1>
+        <h1>Register</h1>
 
         <form
             action=""
@@ -47,7 +47,7 @@ if ($formSend) {
         >
             <div>
                 <label>
-                    Jmeno:
+                    Name:
                     <input
                         type="text"
                         name="name"
@@ -56,30 +56,30 @@ if ($formSend) {
                 </label>
 
                 <?php if ($formSend && !$nameValid) { ?>
-                    <div class="formerror">Jméno musí mít alespon 2 znaky</div>
+                    <div class="formerror">Name needs to be at least 2 characters long</div>
                 <?php } ?>
             </div>
             <div>
                 <label>
-                    Heslo:
+                    Password:
                     <input type="password" name="password">
                 </label>
                 <label>
-                    Heslo znovu:
+                    Password again:
                     <input type="password" name="passwordAgain">
                 </label>
 
                 <?php if ($formSend && !$passValid) { ?>
-                    <div class="formerror">Heslo musí mít alespoň 5 znaků.</div>
+                    <div class="formerror">Password need to be at least 5 characters long.</div>
                 <?php } else if ($formSend && !$passSame) { ?>
-                    <div class="formerror">Hesla se neshodují.</div>
+                    <div class="formerror">Passwords do not match.</div>
                 <?php } ?>
             </div>
 
             <br>
 
             <button type="submit">
-                Registrovat
+                Register
             </button>
         </form>
 

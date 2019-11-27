@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>9. cvičení</title>
+        <title>Task assignment</title>
         <style>
             .formerror {
                 display: inline-block;
@@ -17,7 +17,7 @@
         </style>
     </head>
     <body>
-        <h1>Registrační formulář</h1>
+        <h1>Register</h1>
 
         <form
             action=""
@@ -25,34 +25,34 @@
         >
             <div>
                 <label>
-                    Jmeno:
+                    Name:
                     <input
                         type="text"
                         name="name"
-                        value=""
+                        value="<?php if (isset($_POST["name"])) escape($_POST["name"]) ?>"
                     >
                 </label>
 
-                <div class="formerror">Jméno musí mít alespon 2 znaky</div>
+                <div class="formerror">Name needs to be at least 2 characters long</div>
             </div>
             <div>
                 <label>
-                    Heslo:
+                    Password:
                     <input type="password" name="password">
                 </label>
                 <label>
-                    Heslo znovu:
+                    Password again:
                     <input type="password" name="passwordAgain">
                 </label>
 
-                <div class="formerror">Heslo musí mít alespoň 5 znaků.</div>
-                <div class="formerror">Hesla se neshodují.</div>
+                <div class="formerror">Password need to be at least 5 characters long.</div>
+                <div class="formerror">Passwords do not match.</div>
             </div>
 
             <br>
 
             <button type="submit">
-                Registrovat
+                Register
             </button>
         </form>
 
