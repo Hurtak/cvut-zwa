@@ -29,7 +29,7 @@ if ($formSend) {
         <meta charset="utf-8">
         <title>Task solution</title>
         <style>
-            .formerror {
+            .form-error {
                 display: inline-block;
                 padding: 0 0.5em;
                 border: 1px solid rgba(255, 0, 0, 0.5);
@@ -56,7 +56,7 @@ if ($formSend) {
                 </label>
 
                 <?php if ($formSend && !$nameValid) { ?>
-                    <div class="formerror">Name needs to be at least 2 characters long</div>
+                    <div class="form-error">Name needs to be at least 2 characters long</div>
                 <?php } ?>
             </div>
             <div>
@@ -70,9 +70,9 @@ if ($formSend) {
                 </label>
 
                 <?php if ($formSend && !$passValid) { ?>
-                    <div class="formerror">Password need to be at least 5 characters long.</div>
+                    <div class="form-error">Password need to be at least 5 characters long.</div>
                 <?php } else if ($formSend && !$passSame) { ?>
-                    <div class="formerror">Passwords do not match.</div>
+                    <div class="form-error">Passwords do not match.</div>
                 <?php } ?>
             </div>
 
