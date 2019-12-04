@@ -1,18 +1,22 @@
 <?php
 
+/*
+Tasks:
+    - Add list of registered users
+*/
+
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>10. cvičení</title>
+        <title>Task solution</title>
     </head>
     <body>
-        <h1>Zaregistrovaní uživatelé</h1>
+        <h1>Registered users</h1>
 
         <ul>
         </ul>
-
     </body>
 </html>
