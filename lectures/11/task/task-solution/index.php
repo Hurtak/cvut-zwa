@@ -1,31 +1,5 @@
 <?php
 
-/*
-    Cookies
-        http://php.net/manual/en/features.cookies.php
-
-        Implementace vybrání barevného skinu stránky pomocí cookies
-            1. Když byl odeslán formulář s nastavením vzhledu
-                - Jestli je nastaven tmavý vzhled, nastavit cookie
-                - Jestli byl vypnutý tmavý vzhled, odstranit cookie
-            2. Jinak se podívat jestli není nastavena cookie z dřívějška
-            3. Dle formuláře nebo cookie se rozhodnout jaký vzhled má být vybrán
-            4. Přídat CSS na přepínání vzhledu
-
-    Session:
-        http://php.net/manual/en/session.examples.basic.php
-
-        Implementace počítání přístupů na stránku pomocí session
-            1. Nastartovat session
-            2. V případě že se jedná o první přistup, založit počítadlo v session datech
-            3. V případě že se jedná o další přístup, inkrementovat počítadlo
-            4. Vypsat počet přístupů na stránku
-            5. Přidat formulář který vyresetuje počítadlo
-
-    Zabraneni dvojimu odeslani formulare:
-        P-R-G (POST - Redirect - GET)
-*/
-
 // Cookies
 $skinFormSent = isset($_POST["skin"]);
 $skinCookieSet = isset($_COOKIE["dark-skin"]);
@@ -67,7 +41,7 @@ $_SESSION["counter"] += 1;
 <html>
     <head>
         <meta charset="utf-8">
-        <title>11. cvičení</title>
+        <title>Cookies & Sessions</title>
         <style>
             body.dark-skin {
                 background-color: black;
@@ -80,14 +54,12 @@ $_SESSION["counter"] += 1;
         </style>
     </head>
     <body class="<?php if ($darkSkin) echo "dark-skin" ?>">
-        <h1>11. cvičení</h1>
-
         <h2>Cookies</h2>
         <form
             action=""
             method="POST"
         >
-            <h3>Nastavení vzhledu</h3>
+            <h3>Skin settings</h3>
 
             <label>
                 <input
@@ -96,20 +68,20 @@ $_SESSION["counter"] += 1;
                     value="1"
                     <?php if ($darkSkin) echo "checked" ?>
                 >
-                Tmavy vzhled
+                Dark skin
             </label>
 
             <br>
             <br>
 
             <button type="submit" name="skin">
-                Nastavit
+                Set
             </button>
         </form>
 
         <h2>Session</h2>
         <p>
-            Počet přístupů na stránku:
+            Number of visits:
             <?php echo $_SESSION["counter"] ?>
         </p>
 
@@ -118,7 +90,7 @@ $_SESSION["counter"] += 1;
             method="POST"
         >
             <button type="submit" name="clear-session">
-                Vymazat session
+                Clear session
             </button>
         </form>
 
