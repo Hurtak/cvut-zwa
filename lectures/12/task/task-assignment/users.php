@@ -8,21 +8,22 @@ require "src/app.php";
 <html>
     <head>
         <meta charset="utf-8">
-        <title>12. cvičení</title>
+        <title>Users</title>
     </head>
     <body>
-        <h1>Zaregistrovaní uživatelé</h1>
+        <h1>Registered users</h1>
 
         <header>
             <?php if (false) { ?>
                 <p>
-                    Jste prihlasen jako: xxx
+                    Logged in as:
+                    xxx
                 </p>
                 <form action="" method="POST">
                     <button type="submit" name="logout">Logout</button>
                 </form>
             <?php } else { ?>
-                <p>Nejse prihlasen</p>
+                <p>Not logged in</p>
             <?php } ?>
         <header>
 
