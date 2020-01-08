@@ -15,22 +15,22 @@ if ($logoutFormSend) {
 <html>
     <head>
         <meta charset="utf-8">
-        <title>12. cvičení</title>
+        <title>Users</title>
     </head>
     <body>
-        <h1>Zaregistrovaní uživatelé</h1>
+        <h1>Registered users</h1>
 
         <header>
             <?php if ($user->isLoggedIn()) { ?>
                 <p>
-                    Jste prihlasen jako
+                    Logged in as:
                     <?php write($user->loggedUser["username"]) ?>
                 </p>
-                <form action="users.php" method="POST">
+                <form action="" method="POST">
                     <button type="submit" name="logout">Logout</button>
                 </form>
             <?php } else { ?>
-                <p>Nejse prihlasen</p>
+                <p>Not logged in</p>
             <?php } ?>
         <header>
 

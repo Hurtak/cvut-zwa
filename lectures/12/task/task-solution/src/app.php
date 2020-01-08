@@ -11,4 +11,3 @@ function write($value) {
 
 $db = new DB();
 $user = new User($db);
-
